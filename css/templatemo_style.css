@@ -35,16 +35,16 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', Arial, Helvetice Neue, sans-s
 #contact .section-title { border-color: #cb1d62; }
 #contact h2 { background-color: #e3387c; }
 
-a.largeButton { color: white; text-transform: uppercase; font-weight: 700; font-size: 14px; display: inline-block; padding: 10px 20px; border-bottom: 3px solid; }
+a.largeButton { color: white; text-transform: uppercase; font-weight: 700; font-size: 14px; display: inline-block; padding: 10px 20px; border-bottom: 3px solid; border-radius: 10px 10px 10px 10px;}
 
-.homeBgColor { background: #38a9e3; }
-.homeBgColor:hover { background-color: #16709f; }
+.homeBgColor { background: #38a9e3;}
+.homeBgColor:hover { background-color: #16709f;}
 
 .portfolioBgColor { background: #38e395; }
-.portfolioBgColor:hover { background-color: #169f60; }
+.portfolioBgColor:hover { background-color: #169f60;}
 
 .contactBgColor { background: #e3387c; }
-.contactBgColor:hover { background-color: #9f164d; }
+.contactBgColor:hover { background-color: #9f164d;}
 
 a.largeButton.homeBgColor { border-color: #16709f; }
 
