@@ -93,7 +93,7 @@ a.menu-toggle-btn i { line-height: 60px; }
 
 .slider-caption { position: absolute; vertical-align: middle; width: 100%; text-align: center; height: 100; z-index: 8; color: white; top: 200px; }
 .slider-caption h2 { font-size: 48px; text-transform: uppercase; font-weight: 800; margin-bottom: 30px; }
-.slider-caption p { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; width: 50%; margin: 0 auto 30px auto; line-height: 1.8em; }
+.slider-caption p { font-size: 16px; text-transform: uppercase; letter-spacing: 1px; width: 50%; margin: 0 auto 30px auto; line-height: 1.8em; }
 
 .flexslider { background-color: black; height: 608px; overflow: hidden; margin: 0; }
 
@@ -121,7 +121,7 @@ a.menu-toggle-btn i { line-height: 60px; }
 .member-content h4 { text-transform: uppercase; font-size: 18px; color: #e9b144; }
 .member-content p { color: #aaaaaa; font-size: 12; }
 
-.social-member li { display: inline; float: left; width: 100px; height: 50px; background-color: #e9b144; text-align: center; margin-right: 1px; }
+.social-member li { display: inline; float: left; width: 100px; height: 50px; background-color: #e9b144; text-align: center; margin-right: 1px; margin-left: 190px; margin-top: 190px; }
 .social-member li a { display: block; line-height: 40px; color: white; }
 .social-member li:hover { background-color: #e5a424; }
 

@@ -1,5 +1,8 @@
-#hFont
+.Font
 {
-	font-family: 'Lobster', cursive;
+	font-family: 'Caveat Brush', cursive;
+	font-size: 20px;
+	margin-top: 5px;
 
 }
+
