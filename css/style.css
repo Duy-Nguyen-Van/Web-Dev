@@ -23,6 +23,15 @@ ul,label{
 body a:hover{
 	text-decoration:none;
 }
+#quantity
+{
+	text-indent: 9px;
+    height: 35px;
+    border: 1px solid #ccc;
+    max-width: 100%;
+    width: 60px;
+    margin-bottom: 20px;
+}
 /*-- header --*/
 .header-grid-left ul li a,.new-collections-grid1-image-pos a,.new-collections-grid1 h4 a,.login a,.register-home a,.checkout-right-basket a,.bootstrap-tab-text-grid-right ul li a,.occasion-cart a,input[type="submit"],.mail-grid-right1 ul li a,.categories ul li a,.new-products-grid-right-add-cart p a,.new-products-grid-right h4 a,.products-right-grid1-add-cart p a,.timer-grid-left h3 a,.new-collections-grid1-left p a,.copy-right p a,.footer-grid-sub-grid-right h4 a,input[type="submit"],.footer-grid ul li a{
 	transition:.5s ease-in-out;
@@ -2487,6 +2496,7 @@ td.invert-image a img {
 	}
 	.new-collections-grid1-image-pos a {
 		padding: 7px 20px;
+		margin-left: 40px!important;
 	}
 	.new-collections-grid1-image-pos {
 		top: 40%;
