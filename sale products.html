@@ -41,6 +41,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 new WOW().init();
 	</script>
 	<!-- //animation-effect -->
+	<style>
+	figure.zoom {
+		background-position: 50% 50%;
+		position: relative;
+		width: 300px;
+		overflow: hidden;
+		cursor: zoom-in;
+		border: 1px solid rgb(0,0,0);
+	}
+
+	figure.zoom img:hover {
+		opacity: 0;
+	}
+
+	figure.zoom img {
+		transition: opacity 0.5s;
+		display: block;
+		width: 100%;
+	}
+</style>
+
+<script>
+
+	function zoom(event){
+		var zoomer = event.currentTarget;
+		x = event.offsetX/zoomer.offsetWidth*100;
+		y = event.offsetY/zoomer.offsetHeight*100;
+		zoomer.style.backgroundPosition = 5*x + '% ' + y + '%';
+	}
+
+	function zoom(e) {
+		var zoomer = e.currentTarget;
+		e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+		e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+		x = (offsetX / zoomer.offsetWidth) * 100
+		y = (offsetY / zoomer.offsetHeight) * 100
+		zoomer.style.backgroundPosition = 5*x + "% " + y + "%";
+	}
+</script>
 </head>
 	
 <body>
@@ -196,10 +235,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-model_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+										<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-model_large.jpg" alt=" " class="img-responsive"/>
+									</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
-									<h4>Box Shirt</h4>
+									<h4>Deta Shirt</h4>
 									<div class="modal_body_right_cart simpleCart_shelfItem">
 										<p><!--<span>560.000đ</span>--><i class="item_price">560.000đ</i></p>
 									</div>
@@ -235,7 +276,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->

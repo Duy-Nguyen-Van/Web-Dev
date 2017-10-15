@@ -42,6 +42,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 new WOW().init();
 	</script>
 	<!-- //animation-effect -->
+	<style>
+figure.zoom {
+	background-position: 50% 50%;
+	position: relative;
+	width: 300px;
+	overflow: hidden;
+	cursor: zoom-in;
+	border: 1px solid rgb(0,0,0);
+}
+
+figure.zoom img:hover {
+	opacity: 0;
+}
+
+figure.zoom img {
+	transition: opacity 0.5s;
+	display: block;
+	width: 100%;
+}
+</style>
+
+<script>
+
+	function zoom(event){
+		var zoomer = event.currentTarget;
+		x = event.offsetX/zoomer.offsetWidth*100;
+		y = event.offsetY/zoomer.offsetHeight*100;
+		zoomer.style.backgroundPosition = 5*x + '% ' + y + '%';
+	}
+
+	function zoom(e) {
+		var zoomer = e.currentTarget;
+		e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+		e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+		x = (offsetX / zoomer.offsetWidth) * 100
+		y = (offsetY / zoomer.offsetHeight) * 100
+		zoomer.style.backgroundPosition = 5*x + "% " + y + "%";
+	}
+</script>
 </head>
 	
 <body>
@@ -195,9 +234,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<section>
 							<div class="modal-body">
-								<div class="col-md-5 modal_body_left single-right-left animated wow slideInUp">
-									<!-- <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_large.jpg" alt=" " class="img-responsive" /> -->
-									<div class="flexslider">
+								<div class="col-md-5 modal_body_left">
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_large.jpg")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_large.jpg" alt=" " class="img-responsive"/>
+									</figure>
+									<!-- <div class="flexslider">
 										<ul class="slides">
 											<li data-thumb="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-black-1-_master.jpg">
 												<div class="thumb-image"> <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-black-1-_master.jpg" data-imagezoom="true" class="img-responsive"> </div>
@@ -209,9 +250,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<div class="thumb-image"> <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-red-1_master.jpg" data-imagezoom="true" class="img-responsive"> </div>
 											</li> 
 										</ul>
-									</div>
+									</div> -->
 									<!-- flixslider -->
-									<script defer src="js/jquery.flexslider.js"></script>
+									<!-- <script defer src="js/jquery.flexslider.js"></script>
 									<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 									<script>
 									// Can also be used with $(document).ready()
@@ -221,7 +262,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											controlNav: "thumbnails"
 										});
 									});
-									</script>
+									</script> -->
 									<!-- flixslider -->
 								</div>
 								<div class="col-md-7 modal_body_right">
@@ -262,7 +303,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -297,7 +338,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/r0183532_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/r0183532_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+									<img src="http://product.hstatic.net/1000161656/product/r0183532_large.jpg" alt=" " class="img-responsive" alt=" " class="img-responsive"/>
+								</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>F Boy Tee</h4>
@@ -336,7 +379,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -370,7 +413,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http:////product.hstatic.net/1000161656/product/ssstutter-product-collar-denim-shirt-blue-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http:////product.hstatic.net/1000161656/product/ssstutter-product-collar-denim-shirt-blue-model_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+										<img src="http:////product.hstatic.net/1000161656/product/ssstutter-product-collar-denim-shirt-blue-model_large.jpg" alt=" " class="img-responsive"/>
+									</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Denim Shirt</h4>
@@ -409,7 +454,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -443,7 +488,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-shirt-ver2-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-box-shirt-ver2-model_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+										<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-shirt-ver2-model_large.jpg" alt=" " class="img-responsive"/>
+									</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Box Shirt</h4>
@@ -482,7 +529,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -516,7 +563,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-loan-tee-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-loan-tee-model_large.jpg")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-loan-tee-model_large.jpg" alt=" " class="img-responsive"/>
+								</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Loan Tee</h4>
@@ -555,7 +604,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -589,7 +638,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-model_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+										<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-model_large.jpg" alt=" " class="img-responsive"/>
+									</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Deta Shirt</h4>
@@ -628,7 +679,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -662,7 +713,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-kat-tee-black-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-kat-tee-black-model_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-kat-tee-black-model_large.jpg" alt=" " class="img-responsive" alt=" " class="img-responsive"/>
+								</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Kat Tee</h4>
@@ -701,7 +754,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -735,7 +788,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<section>
 							<div class="modal-body">
 								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-bea-striped-shirt-model_large.jpg" alt=" " class="img-responsive" />
+									<figure class="zoom" style="background:url(http://product.hstatic.net/1000161656/product/ssstutter-product-bea-striped-shirt-model_large.jpg" alt=" " class="img-responsive")" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+										<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-bea-striped-shirt-model_large.jpg" alt=" " class="img-responsive"/>
+									</figure>
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Bae Striped Shirt</h4>
@@ -774,7 +829,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<p><a class="item_add" href="#">Mua ngay</a></p>
 										</div>
 										<div class="color-quality-left">
-											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+											<p><a class="item_add" href="checkout.html">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
