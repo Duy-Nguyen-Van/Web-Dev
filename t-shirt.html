@@ -196,42 +196,48 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<section>
 							<div class="modal-body">
-								<div class="col-md-5 modal_body_left">
-									<img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_large.jpg" alt=" " class="img-responsive" />
+								<div class="col-md-5 modal_body_left single-right-left animated wow slideInUp">
+									<!-- <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_large.jpg" alt=" " class="img-responsive" /> -->
+									<div class="flexslider">
+										<ul class="slides">
+											<li data-thumb="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-black-1-_master.jpg">
+												<div class="thumb-image"> <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-black-1-_master.jpg" data-imagezoom="true" class="img-responsive"> </div>
+											</li>
+											<li data-thumb="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_master.jpg">
+												<div class="thumb-image"> <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_master.jpg" data-imagezoom="true" class="img-responsive"> </div>
+											</li>
+											<li data-thumb="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-red-1_master.jpg">
+												<div class="thumb-image"> <img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-red-1_master.jpg" data-imagezoom="true" class="img-responsive"> </div>
+											</li> 
+										</ul>
+									</div>
+									<!-- flixslider -->
+									<script defer src="js/jquery.flexslider.js"></script>
+									<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+									<script>
+									// Can also be used with $(document).ready()
+									$(window).load(function() {
+										$('.flexslider').flexslider({
+											animation: "slide",
+											controlNav: "thumbnails"
+										});
+									});
+									</script>
+									<!-- flixslider -->
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Box Tee</h4>
-									<p>Mô tả: ABC</p>
-									<div class="rating">
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="clearfix"> </div>
-									</div>
 									<div class="modal_body_right_cart simpleCart_shelfItem">
 										<p><!--<span>270.000đ</span>--><i class="item_price">270.000đ</i></p>
-										<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 									</div>
-									<h5>Màu áo</h5>
 									<div class="color-quality">
-										<ul>
-											<li><a href="#"><span></span>Đỏ</a></li>
-											<li><a href="#" class="brown"><span></span>Vàng</a></li>
-											<li><a href="#" class="purple"><span></span>Hồng</a></li>
-											<li><a href="#" class="gray"><span></span>Tím</a></li>
-										</ul>
+										<h5>Màu:</h5>
+										<select>
+											<option value="null">Đen</option>
+											<option value="null">Trắng</option> 
+											<option value="null">Vàng</option>					
+											<option value="null">Đỏ</option>							
+										</select>
 									</div>
 									<div class="color-quality">
 										<h5>Size:</h5>
@@ -239,18 +245,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<option value="null">S</option>
 											<option value="null">M</option> 
 											<option value="null">L</option>					
-											<option value="null">XL</option>
-											<option value="null">XXL</option>
-											<option value="null">XXXL</option>								
+											<option value="null">XL</option>								
 										</select>
 									</div>
-									<br/>
 									<div class="quantity color-quality">
 										<h5>Số lượng:</h5>
 										<div class="quantity-select">                           
 											<div class="entry value-minus">&nbsp;</div>
 											<div class="entry value"><span>1</span></div>
 											<div class="entry value-plus active">&nbsp;</div>
+										</div>
+									</div>
+									<br>
+									<br>
+									<div class="modal_body_right_cart simpleCart_shelfItem">
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Mua ngay</a></p>
+										</div>
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -289,37 +302,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>F Boy Tee</h4>
-									<p>Mô tả: ABC</p>
-									<div class="rating">
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="clearfix"> </div>
-									</div>
 									<div class="modal_body_right_cart simpleCart_shelfItem">
 										<p><!--<span>250.000đ</span>--><i class="item_price">250.000đ</i></p>
-										<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 									</div>
-									<h5>Màu áo</h5>
 									<div class="color-quality">
-										<ul>
-											<li><a href="#"><span></span>Đỏ</a></li>
-											<li><a href="#" class="brown"><span></span>Vàng</a></li>
-											<li><a href="#" class="purple"><span></span>Hồng</a></li>
-											<li><a href="#" class="gray"><span></span>Tím</a></li>
-										</ul>
+										<h5>Màu:</h5>
+										<select>
+											<option value="null">Đen</option>
+											<option value="null">Trắng</option> 
+											<option value="null">Vàng</option>					
+											<option value="null">Đỏ</option>							
+										</select>
 									</div>
 									<div class="color-quality">
 										<h5>Size:</h5>
@@ -327,18 +320,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<option value="null">S</option>
 											<option value="null">M</option> 
 											<option value="null">L</option>					
-											<option value="null">XL</option>
-											<option value="null">XXL</option>
-											<option value="null">XXXL</option>								
+											<option value="null">XL</option>								
 										</select>
 									</div>
-									<br/>
 									<div class="quantity color-quality">
 										<h5>Số lượng:</h5>
 										<div class="quantity-select">                           
 											<div class="entry value-minus">&nbsp;</div>
 											<div class="entry value"><span>1</span></div>
 											<div class="entry value-plus active">&nbsp;</div>
+										</div>
+									</div>
+									<br>
+									<div class="modal_body_right_cart simpleCart_shelfItem">
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Mua ngay</a></p>
+										</div>
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -377,37 +376,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Loan Tee</h4>
-									<p>Mô tả: ABC</p>
-									<div class="rating">
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="clearfix"> </div>
-									</div>
 									<div class="modal_body_right_cart simpleCart_shelfItem">
-										<p><!--<span>280.000đ</span>--><i class="item_price">280.000đ</i></p>
-										<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
+										<p><!--<span>270.000đ</span>--><i class="item_price">280.000đ</i></p>
 									</div>
-									<h5>Màu áo</h5>
 									<div class="color-quality">
-										<ul>
-											<li><a href="#"><span></span>Đỏ</a></li>
-											<li><a href="#" class="brown"><span></span>Vàng</a></li>
-											<li><a href="#" class="purple"><span></span>Hồng</a></li>
-											<li><a href="#" class="gray"><span></span>Tím</a></li>
-										</ul>
+										<h5>Màu:</h5>
+										<select>
+											<option value="null">Đen</option>
+											<option value="null">Trắng</option> 
+											<option value="null">Vàng</option>					
+											<option value="null">Đỏ</option>							
+										</select>
 									</div>
 									<div class="color-quality">
 										<h5>Size:</h5>
@@ -415,18 +394,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<option value="null">S</option>
 											<option value="null">M</option> 
 											<option value="null">L</option>					
-											<option value="null">XL</option>
-											<option value="null">XXL</option>
-											<option value="null">XXXL</option>								
+											<option value="null">XL</option>								
 										</select>
 									</div>
-									<br/>
 									<div class="quantity color-quality">
 										<h5>Số lượng:</h5>
 										<div class="quantity-select">                           
 											<div class="entry value-minus">&nbsp;</div>
 											<div class="entry value"><span>1</span></div>
 											<div class="entry value-plus active">&nbsp;</div>
+										</div>
+									</div>
+									<br>
+									<div class="modal_body_right_cart simpleCart_shelfItem">
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Mua ngay</a></p>
+										</div>
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -465,37 +450,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</div>
 								<div class="col-md-7 modal_body_right">
 									<h4>Kat Tee</h4>
-									<p>Mô tả: ABC</p>
-									<div class="rating">
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star-.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="rating-left">
-											<img src="images/star.png" alt=" " class="img-responsive" />
-										</div>
-										<div class="clearfix"> </div>
-									</div>
 									<div class="modal_body_right_cart simpleCart_shelfItem">
 										<p><!--<span>300.000đ</span>--><i class="item_price">300.000đ</i></p>
-										<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 									</div>
-									<h5>Màu áo</h5>
 									<div class="color-quality">
-										<ul>
-											<li><a href="#"><span></span>Đỏ</a></li>
-											<li><a href="#" class="brown"><span></span>Vàng</a></li>
-											<li><a href="#" class="purple"><span></span>Hồng</a></li>
-											<li><a href="#" class="gray"><span></span>Tím</a></li>
-										</ul>
+										<h5>Màu:</h5>
+										<select>
+											<option value="null">Đen</option>
+											<option value="null">Trắng</option> 
+											<option value="null">Vàng</option>					
+											<option value="null">Đỏ</option>							
+										</select>
 									</div>
 									<div class="color-quality">
 										<h5>Size:</h5>
@@ -503,18 +468,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<option value="null">S</option>
 											<option value="null">M</option> 
 											<option value="null">L</option>					
-											<option value="null">XL</option>
-											<option value="null">XXL</option>
-											<option value="null">XXXL</option>								
+											<option value="null">XL</option>								
 										</select>
 									</div>
-									<br/>
 									<div class="quantity color-quality">
 										<h5>Số lượng:</h5>
 										<div class="quantity-select">                           
 											<div class="entry value-minus">&nbsp;</div>
 											<div class="entry value"><span>1</span></div>
 											<div class="entry value-plus active">&nbsp;</div>
+										</div>
+									</div>
+									<br>
+									<div class="modal_body_right_cart simpleCart_shelfItem">
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Mua ngay</a></p>
+										</div>
+										<div class="color-quality-left">
+											<p><a class="item_add" href="#">Thêm vào giỏ hàng</a></p>
 										</div>
 									</div>
 									<!--quantity-->
@@ -635,7 +606,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="footer-grids">
 				<div class="col-md-6 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
 					<h3>N&M SHOP</h3>
-					<p>Shop chuyên cung cấp những sản phẩm thời trang theo xu hướng mới nhất, <br>chất lượng nhất cho người Việt.<span>Shop quần áp N&M nhát định sẽ làm bạn hài lòng.</span></p>
+					<p>Shop chuyên cung cấp những sản phẩm thời trang theo xu hướng mới nhất, <br>chất lượng nhất cho người Việt.<span>Shop quần áp N&M nhất định sẽ làm bạn hài lòng.</span></p>
 				</div>
 				<div class="col-md-6 footer-grid animated wow slideInLeft" data-wow-delay=".6s">
 					<h3>LIÊN HỆ</h3>

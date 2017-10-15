@@ -814,6 +814,7 @@ p.est{
 	background:#d8703f;
 	text-decoration:none;
 	font-size: 14px;
+	margin-left: 42px;
 }
 .new-collections-grid1:hover .new-collections-grid1-image-pos{
 	display:block;
@@ -3896,7 +3897,7 @@ td.invert-image a img {
 .simpleCart_shelfItem p a{
     font-size: 14px;
     color:#212121;
-    margin: 0;
+    margin: 20px;
     text-decoration: none;
     text-transform: uppercase;
     padding: .5em 2em;
@@ -3930,7 +3931,7 @@ td.invert-image a img {
 .modal_body_right h5{
 	font-size: 1em;
     color: #212121;
-    margin: 3em 0 1em;
+    margin: 2em 0 1em;
 }
 /*-- Ratings --*/
 .rating-left {
