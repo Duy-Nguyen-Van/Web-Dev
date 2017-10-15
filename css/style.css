@@ -1641,10 +1641,10 @@ h2.typoh2{
 /*-- //Typography --*/
 /*-- mail --*/
 .mail h3:before{
-	left:25%;
+	left:15%;
 }
 .mail h3:after{
-	right:25%;
+	right:15%;
 }
 .mail-grids{
 	margin:3em 0;
