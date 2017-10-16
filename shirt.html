@@ -280,7 +280,7 @@ figure.zoom img {
 										</div>
 									</div>
 									<!--quantity-->
-									<script>
+<!-- 									<script>
 									$('.value-plus').on('click', function(){
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
 										divUpd.text(newVal);
@@ -290,7 +290,7 @@ figure.zoom img {
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
 										if(newVal>=1) divUpd.text(newVal);
 									});
-									</script>
+									</script> -->
 									<!--quantity-->
 								</div>
 								<div class="clearfix"> </div>
@@ -356,7 +356,7 @@ figure.zoom img {
 										</div>
 									</div>
 									<!--quantity-->
-									<script>
+<!-- 									<script>
 									$('.value-plus').on('click', function(){
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
 										divUpd.text(newVal);
@@ -366,7 +366,7 @@ figure.zoom img {
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
 										if(newVal>=1) divUpd.text(newVal);
 									});
-									</script>
+									</script> -->
 									<!--quantity-->
 								</div>
 								<div class="clearfix"> </div>
@@ -432,7 +432,7 @@ figure.zoom img {
 										</div>
 									</div>
 									<!--quantity-->
-									<script>
+<!-- 									<script>
 									$('.value-plus').on('click', function(){
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
 										divUpd.text(newVal);
@@ -442,7 +442,7 @@ figure.zoom img {
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
 										if(newVal>=1) divUpd.text(newVal);
 									});
-									</script>
+									</script> -->
 									<!--quantity-->
 								</div>
 								<div class="clearfix"> </div>
@@ -508,7 +508,7 @@ figure.zoom img {
 										</div>
 									</div>
 									<!--quantity-->
-									<script>
+<!-- 									<script>
 									$('.value-plus').on('click', function(){
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
 										divUpd.text(newVal);
@@ -518,7 +518,7 @@ figure.zoom img {
 										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
 										if(newVal>=1) divUpd.text(newVal);
 									});
-									</script>
+									</script> -->
 									<!--quantity-->
 								</div>
 								<div class="clearfix"> </div>
@@ -644,7 +644,17 @@ figure.zoom img {
 		</div>
 	</div>
 	<!-- //footer -->
+	<script>
+		$('.value-plus').on('click', function(){
+			var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+			divUpd.text(newVal);
+		});
 
+		$('.value-minus').on('click', function(){
+			var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+			if(newVal>=1) divUpd.text(newVal);
+		});
+	</script>
 </body>
 
 </html>
