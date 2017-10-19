@@ -437,6 +437,9 @@ figure.zoom img {
 	<div class="footer">
 		<div class="container">
 			<div class="footer-grids">
+				<div id="toTop">
+					<img src="images/rsz_totop.png" alt=" " />
+				</div>
 				<div class="col-md-6 footer-grid animated wow slideInLeft" data-wow-delay=".5s">
 					<h3>N&M SHOP</h3>
 					<p>Shop chuyên cung cấp những sản phẩm thời trang theo xu hướng mới nhất, <br>chất lượng nhất cho người Việt.<span>Shop quần áp N&M nhất định sẽ làm bạn hài lòng.</span></p>
@@ -466,6 +469,22 @@ figure.zoom img {
 		$('.value-minus').on('click', function(){
 		var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
 		if(newVal>=1) divUpd.text(newVal);
+		});
+	</script>
+	<script type='text/javascript'>
+		$(function() {
+			$(window).scroll(function() {
+				if ($(this).scrollTop() != 0) {
+					$('#toTop').fadeIn();
+				} else {
+					$('#toTop').fadeOut();
+				}
+			});
+			$('#toTop').click(function() {
+				$('footer,html').animate({
+					scrollTop: 0
+				}, 800);
+			});
 		});
 	</script>
 </body>

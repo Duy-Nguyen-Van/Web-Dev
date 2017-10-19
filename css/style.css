@@ -4011,4 +4011,17 @@ td.invert-image a img {
 .color-quality ul li a.gray span {
     background: #ff00ff;
 }
+#toTop {
+    width: 34px;
+    height: 35px;
+    display: none;
+    z-index: 80;
+    text-align: center;
+    color: #444;
+    position: fixed;
+    bottom: 40px;
+    display: none;
+    right: 50px;
+    cursor: pointer;
+}
 /*-- //Overview --*/
