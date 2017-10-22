@@ -121,7 +121,7 @@ a.menu-toggle-btn i { line-height: 60px; }
 .member-content h4 { text-transform: uppercase; font-size: 18px; color: #e9b144; }
 .member-content p { color: #aaaaaa; font-size: 12; }
 
-.social-member li { display: inline; float: left; width: 100px; height: 50px; background-color: #e9b144; text-align: center; margin-right: 1px; margin-left: 190px; margin-top: 190px; }
+.social-member li { display: inline; top: 40%; left: 35%; width: 30%; background-color: #e9b144; text-align: center; position: absolute; }
 .social-member li a { display: block; line-height: 40px; color: white; }
 .social-member li:hover { background-color: #e5a424; }
 
