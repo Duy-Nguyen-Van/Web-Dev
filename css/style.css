@@ -130,8 +130,8 @@ ul.social-icons li a.instagram:hover{
     padding-left: .3em;
 }
 .logo-nav-left1 {
-    float: left;
-    margin-left: 2em;
+	float: left;
+    margin-left: 150px;
 }
 .logo-nav-left1 ul li a{
 	font-size:.875em;
@@ -799,8 +799,8 @@ p.est{
 }
 .new-collections-grid1-image-pos{
 	position:absolute;
-	top: 50%;
-    left: 26%;
+/*	top: 50%;
+    left: 26%;*/
 	transition:.5s ease-in-out;
 	-webkit-transition:.5s ease-in-out;
 	-moz-transition:.5s ease-in-out;
@@ -814,7 +814,7 @@ p.est{
 	background:#d8703f;
 	text-decoration:none;
 	font-size: 14px;
-	margin-left: 42px;
+/*	margin-left: 42px;*/
 }
 .new-collections-grid1:hover .new-collections-grid1-image-pos{
 	display:block;
@@ -1225,8 +1225,8 @@ select#country,select#country1 {
     height: 60% !important;
 }
 .products-right-grids-pos {
-    top: 40% !important;
-    left: 20% !important;
+ 	top: 40% !important;
+ 	right: 30% !important;
 }
 .products-right-grids-pos-right{
     bottom: 35% !important;
