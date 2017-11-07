@@ -61,7 +61,7 @@ a.largeButton.contactBgColor { border-color: #9f164d; }
 
 .main-menu { text-align: center; }
 .main-menu li { margin-bottom: 1px; }
-.main-menu li a { color: black; text-transform: uppercase; display: block; border-left: 4px solid; padding: 16px 30px; background-color: #ffffff; -webkit-transition: all 150ms ease-in; -moz-transition: all 150ms ease-in; -o-transition: all 150ms ease-in; transition: all 150ms ease-in; }
+.main-menu li a { color: black; text-transform: uppercase; display: block; /*border-left: 4px solid*/; padding: 16px 30px; background-color: #ffffff; -webkit-transition: all 150ms ease-in; -moz-transition: all 150ms ease-in; -o-transition: all 150ms ease-in; transition: all 150ms ease-in; }
 .main-menu li a:hover { background-color: #34393b; }
 
 li.home a { border-color: #38a9e3; }
