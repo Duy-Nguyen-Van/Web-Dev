@@ -1,0 +1,102 @@
+.header-right
+{
+	float: right;
+    margin-top: 5px;
+    width: 14%;
+}
+.product-images
+{
+	 margin: 0 auto;
+}
+.product-grid
+{
+	text-align: center;
+}
+.Title
+{
+	padding: 1em 0;
+	margin: 2em; 
+	text-align: left;
+    border-bottom: 1px solid #DEDEDE;
+}
+.current
+{
+	border-bottom: 2px solid;
+    font-weight: bold;
+}
+.page-node
+{
+	font-size: 15px;
+    padding: 0px 10px;
+    height: 57px;
+    display: inline-block;
+    line-height: 56px;
+}
+.footer
+{
+	margin-left: 53%;
+	height: 71px;
+	width: 654.8438px;
+}
+#toTop {
+    width: 34px;
+    height: 35px;
+    display: none;
+    z-index: 80;
+    text-align: center;
+    color: #444;
+    position: fixed;
+    bottom: 40px;
+    display: none;
+    right: 50px;
+    cursor: pointer;
+}
+.main-menu
+{
+	padding-top: 60px;
+}
+.logo
+{
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.menu-toggle-btn
+{
+	padding-right: 600px
+}
+.cart-total
+{
+	transition: background-color 0.5s;
+    position: absolute;
+    top: inherit;
+    margin-top: -2px;
+    margin-left: -10px;
+    display: inline-block;
+    background-color: #EE000A;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    line-height: 17px;
+    height: 17px;
+    width: 17px;
+    text-align: center;
+}
+.cd-trigger
+{
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #ffffff;
+    opacity: 0;
+    visibility: visible;
+    -webkit-transition: opacity 0.2s, background-color 0.2s;
+    -moz-transition: opacity 0.2s, background-color 0.2s;
+    transition: opacity 0.2s, background-color 0.2s;
+}
