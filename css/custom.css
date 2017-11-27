@@ -105,3 +105,8 @@
     margin-left: -123px;
     margin-right: 20px;
 }
+.responsive-navigation .logo {
+    background-color: #ffffff; 
+    padding: 0px 200px;
+    margin: 0; 
+}
