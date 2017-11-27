@@ -100,3 +100,8 @@
     -moz-transition: opacity 0.2s, background-color 0.2s;
     transition: opacity 0.2s, background-color 0.2s;
 }
+.nextpage
+{
+    margin-left: -123px;
+    margin-right: 20px;
+}
