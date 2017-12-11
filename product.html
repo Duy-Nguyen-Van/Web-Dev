@@ -37,6 +37,13 @@
 		<div class="logo">
 			<a href="index.html"><img src="images/logo.jpg"></a>
 		</div> 
+		<div class="row">
+				<ul>
+					<img src="images/rsz_search-icon.png">
+					<img src="images/rsz_cart-icon.png">
+					<span class="cart-total items-num count">0</span>
+				</ul>
+			</div>
 		<!-- /.logo -->
 		<!-- .menu-toggle-btn -->
         <a href="#" class="menu-toggle-btn">
@@ -89,7 +96,7 @@
 	<!-- #main-content -->
 	<div id="main-content">
 		<!-- .header-right -->
-		<div class="menu-search header-right">
+		<div class="menu-search header-right hidden-xs hidden-sm">
 			<div class="row">
 				<ul>
 					<img src="images/rsz_search-icon.png">
@@ -216,7 +223,7 @@
 				<img src="images/rsz_totop.png" alt=" " />
 			</div>
 			<!-- /#toTop -->
-			<div class="container-fluid">
+			<div class="container">
 				<div class="nextpage">
 					<div class="col-md-12">
 						<!-- .page-node -->
@@ -242,24 +249,7 @@
 	<script src="js/jquery.flexslider.js"></script>
 	<script src="js/jquery.prettyPhoto.js"></script>
 	<script src="js/custom.js"></script>
-	<!-- Back to Top -->
-	<script type='text/javascript'>
-		$(function() {
-			$(window).scroll(function() {
-				if ($(this).scrollTop() != 0) {
-					$('#toTop').fadeIn();
-				} else {
-					$('#toTop').fadeOut();
-				}
-			});
-			$('#toTop').click(function() {
-				$('footer,html').animate({
-					scrollTop: 0
-				}, 800);
-			});
-		});
-	</script>
-	<!-- Back to Top -->
+	<script type='text/javascript' src="js/javascripts-custom.js"></script>
 <!-- /JavaScripts -->
 
 </body>

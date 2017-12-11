@@ -2,6 +2,7 @@
 	float: right;
     margin-top: 5px;
     width: 14%;
+    margin-right: 20px;
 }
 
 .product-images {
@@ -33,9 +34,10 @@
 }
 
 .footer {
-	margin-left: 53%;
-	height: 71px;
-	width: 654.8438px;
+	
+    background-color: #ffffff;
+    color: #000000;
+    padding: 25px 7% 16px 7%;
 }
 
 #toTop {
@@ -102,11 +104,24 @@
 }
 .nextpage
 {
-    margin-left: -123px;
+    margin-left: 393px;
     margin-right: 20px;
 }
 .responsive-navigation .logo {
     background-color: #ffffff; 
     padding: 0px 200px;
     margin: 0; 
+}
+.container {
+    /*margin-right: 0;
+    margin-left: 600px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 30px;*/
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
 }
