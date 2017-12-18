@@ -17,6 +17,7 @@
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/font-google.css') }}" rel="stylesheet">
+	<script src="https://use.fontawesome.com/d73f4dc49f.js"></script>
 	<!-- /Font -->
 
 	<!-- Style -->
@@ -60,10 +61,10 @@
     		<!-- .responsive-menu -->
     		<div class="navi responsive-menu">
     			<ul>
-    				<li class="color"><a href="index.html">Trang chủ</a></li>
-    				<li class="color"><a href="product.html">Sản phẩm</a></li>
-    				<li class="color"><a href="t-shirt.html">Áo thun</a></li>
-    				<li class="color"><a href="shirt.html">Sơ mi</a></li>
+    				<li class="color"><a href="">Trang chủ</a></li>
+    				<li class="color"><a href="product">Sản phẩm</a></li>
+    				<li class="color"><a href="t-shirt">Áo thun</a></li>
+    				<li class="color"><a href="shirt">Sơ mi</a></li>
     				<li class="color"><a href="#services">Hỗ trợ</a></li>
     				<li class="color"><a href="#contact">Liên hệ</a></li>
     			</ul>
@@ -77,7 +78,7 @@
 	<div id="main-sidebar" class="hidden-xs hidden-sm">
 		<!-- .logo -->
 		<div class="logo">
-			<a href="index.html"><img src="{{ asset('images/logo.jpg') }}"/></a>
+			<a href=""><img src="{{ asset('images/logo.jpg') }}"/></a>
 		</div> 
 		<!-- /.logo -->
 		
@@ -85,10 +86,10 @@
 		<div class="navi">
 			<!-- .main-menu -->
 	        <ul class="main-menu">
-	            <li class="color"><a href="index.html">Trang chủ</a></li>
-	            <li class="color"><a href="product.html">Sản phẩm</a></li>
-	            <li class="color"><a href="t-shirt.html">Áo thun</a></li>
-	            <li class="color"><a href="shirt.html">Sơ mi</a></li>
+	            <li class="color"><a href="">Trang chủ</a></li>
+	            <li class="color"><a href="product">Sản phẩm</a></li>
+	            <li class="color"><a href="t-shirt">Áo thun</a></li>
+	            <li class="color"><a href="shirt">Sơ mi</a></li>
 	            <li class="color"><a href="#services">Hỗ trợ</a></li>
 	            <li class="color"><a href="#contact">Liên hệ</a></li>
 	            <li class="color"><a href="#" class="fa fa-facebook"></a></li>
@@ -132,31 +133,14 @@
 			</div>
 			<!-- /#toTop -->
 			<div class="container-footer">
-				<div class="responsive-navigation visible-sm visible-xs">
-					<div class="nextpage-responsive">
-						<div class="col-md-12">
-							<!-- .page-node -->
-							<span class="page-node current">1</span>
-							<a class="page-node" href="product-2.html">2</a>
-							<a class="page-node" href="#">3</a>
-							<!-- /.page-node -->
-							<a class="next fa fa-angle-right" href="#">
-								<span></span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="nextpage hidden-xs hidden-sm">
-					<div class="col-md-12">
-						<!-- .page-node -->
-						<span class="page-node current">1</span>
-						<a class="page-node" href="product-2.html">2</a>
-                       	<a class="page-node" href="#">3</a>
-                       	<!-- /.page-node -->
-                       	<a class="next fa fa-angle-right" href="#">
-                       		<span></span>
-                       	</a>
-					</div>
+				<div class="link-page">
+					<span> </span> 
+					<a class="pageResults next" href="?fit=all&amp;p=7"> ‹ </a>
+					<a onfocus="this.blur()" class="pagecurrent">1</a><a onfocus="this.blur()" class="pageResults" href="?fit=all&amp;p=2">2</a>
+					<a onfocus="this.blur()" class="pageResults" href="?fit=all&amp;p=3">3</a><a class="paginate_button">...</a><a onfocus="this.blur()" class="pageResults" href="?fit=all&amp;p=6">6</a>
+					<a onfocus="this.blur()" class="pageResults" href="?fit=all&amp;p=7">7</a>
+					<a onfocus="this.blur()" class="pageResults" href="?fit=all&amp;p=8">8</a>
+					<a class="pageResults next" href="?fit=all&amp;p=2"> › </a>
 				</div>
 			</div>
 		</div> 

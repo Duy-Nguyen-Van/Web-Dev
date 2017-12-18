@@ -61,10 +61,12 @@
 .logo {
 	margin-bottom: 30px;
 	margin-top: 30px;
+    margin: 0; 
+    background-color: #ffffff; 
+    padding: 0px 92px; 
     /*height:40px; 
     width:103px;*/
 }
-
 .menu-toggle-btn {
 	padding-right: 600px
 }
@@ -212,4 +214,68 @@ a.menu-toggle-btn {
 .nextpage-responsive{
     margin-left: 234px;
     margin-right: 20px;
+}
+.link-page a:hover, .link-page a.pagecurrent {
+    border-width: 0px!important;
+    color: white!important;
+    background-color: #FF9A8B;
+    background-image: linear-gradient(315deg,#FF9A8B 0%,#FF6A88 55%,#FF99AC 100%);
+    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0,0,0.2,1);
+}
+.link-page a:hover, .link-page a.pagecurrent {
+    color: #EE000A;
+    border: #EE000A solid 1px;
+}
+.link-page a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-width: 0px;
+    margin-right: 10px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+.link-page a {
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: #ccc solid 1px;
+    margin-right: 3px;
+    color: #000;
+    text-decoration: none;
+}
+.link-page {
+    text-align: center;
+}
+.link-page a {
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: #ccc solid 1px;
+    margin-right: 3px;
+    color: #000;
+    text-decoration: none;
+}
+.link-page a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-width: 0px;
+    margin-right: 10px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+.link-page a.pageResults.next {
+    background: #EEE;
 }
