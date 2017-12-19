@@ -155,7 +155,9 @@ li.color a:active {
 }
 
 li.color a:hover { 
-    background-color: #cc0000;
+    /*background-color: #cc0000;*/
+    background-color: #FF9A8B;
+    background-image: linear-gradient(315deg,#FF9A8B 0%,#FF6A88 55%,#FF99AC 100%);
 }
 a.menu-toggle-btn {
     width: 100%;
