@@ -377,3 +377,12 @@ a.menu-toggle-btn i {
 		display: none; 
 	}
 }
+
+
+.timetable_sub table,  .timetable_sub th, .timetable_sub td {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
