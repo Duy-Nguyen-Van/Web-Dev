@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title -->
+	<link rel="icon" href="images/title_logo.ico">
+	<title>Giỏ hàng</title>
+	<!-- /Title -->
+
+	<!-- Meta -->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1">
+	<!-- /Meta -->
+
+	<!-- Font -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Courgette|Dancing+Script|Gloria+Hallelujah|Indie+Flower|Lobster|Pacifico|Poiret+One|Quicksand|Roboto|Satisfy|Shadows+Into+Light" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-google.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- /Font -->
+
+	<!-- Style -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/misc.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- /Style -->
+</head>
+<body>
+	<!-- Navigation -->
+	<!-- .responsive-navigation -->
+	<div class="responsive-navigation visible-sm visible-xs">
+		<!-- .logo -->
+		<div class="logo">
+			<a href="#"><img src="images/logo.jpg"></a>
+		</div> 
+		<!-- /.logo -->
+		<!-- .menu-toggle-btn -->
+		<a href="#" class="menu-toggle-btn">
+			<i class="fa fa-bars fa-2x"></i>
+		</a>
+		<!-- /.menu-toggle-btn -->
+		<!-- .responsive-menu -->
+		<div class="navigation responsive-menu">
+			<ul>
+				<li class="home"><a href="#home">Trang chủ</a></li>
+				<li class="product"><a href="#product">Sản phẩm</a></li>
+				<li class="services"><a href="#services">Hỗ trợ</a></li>
+				<li class="contact"><a href="#contact">Liên hệ</a></li>
+			</ul>
+		</div> 
+		<!-- /.responsive-menu -->
+	</div> 
+	<!-- /.responsive-navigation -->
+	
+	<!-- #main-sidebar -->
+	<div id="main-sidebar" class="hidden-xs hidden-sm">
+		<!-- .logo -->
+		<div class="logo">
+			<a href="#"><img src="images/logo.jpg"></a>
+		</div> 
+		<!-- /.logo -->
+		
+		<!-- .navigation -->
+		<div class="navigation">
+			<!-- .main-menu -->
+			<ul class="main-menu">
+				<li class="home"><a href="#home">Trang chủ</a></li>
+				<li class="product"><a href="#product">Sản phẩm</a></li>
+				<li class="services"><a href="#services">Hỗ trợ</a></li>
+				<li class="contact"><a href="#contact">Liên hệ</a></li>
+				<li><a href="#" class="fa fa-facebook"></a></li>
+			</ul>
+			<!-- /.main-menu -->
+		</div> 
+		<!-- /.navigation -->
+	</div> 
+
+	<!-- checkout -->
+
+	<div id="main-content">
+		<!-- .header-right -->
+		<div class="menu-search header-right hidden-xs hidden-sm">
+			<div class="row">
+				<ul>
+					<img src="images/rsz_search-icon.png">
+					<img src="images/rsz_cart-icon.png">
+					<span class="cart-total items-num count">0</span>
+				</ul>
+			</div>
+		</div>
+		<!-- /.header-right -->
+		<div class="container-fluid">
+			<!-- Checkout -->
+			<div class = "tittle">
+				<h4>Giỏ hàng <span>(2 sản phẩm)</span></h4>
+			</div>
+			<br>
+			<table id="cart" class="table table-hover table-condensed"> 
+				<thead> 
+					<tr> 
+						<th style="width:50%">Tên sản phẩm</th> 
+						<th style="width:10%">Giá</th> 
+						<th style="width:8%">Số lượng</th> 
+						<th style="width:22%" class="text-center">Thành tiền</th> 
+						<th style="width:10%"> </th> 
+					</tr> 
+				</thead> 
+				<tbody><tr> 
+					<td data-th="Product"> 
+						<div class="row"> 
+							<div class="col-sm-2 hidden-xs"><img src="http://product.hstatic.net/1000161656/product/ssstutter-product-box-tee-yellow-model_large.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+							</div> 
+							<div class="col-sm-10"> 
+								<h4 class="nomargin">Box Tee</h4> 
+							</div> 
+						</div> 
+					</td> 
+					<td data-th="Price">270.000đ</td> 
+					<td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+					</td> 
+					<td data-th="Subtotal" class="text-center">270.000 đ</td> 
+					<td class="actions" data-th=""> 
+						<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+						</button>
+					</td> 
+				</tr> 
+				<tr> 
+					<td data-th="Product"> 
+						<div class="row"> 
+							<div class="col-sm-2 hidden-xs"><img src="http://juky.vn/upload/products/photo20171003135309_1507090527.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+							</div> 
+							<div class="col-sm-10"> 
+								<h4 class="nomargin">Dog Tee</h4> 
+							</div> 
+						</div> 
+					</td> 
+					<td data-th="Price">150.000đ</td> 
+					<td data-th="Quantity"><input class="form-control text-center" value="1" type="number">
+					</td> 
+					<td data-th="Subtotal" class="text-center">150.000đ</td> 
+					<td class="actions" data-th="">
+						<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+						</button>
+					</td> 
+				</tr> 
+			</tbody><tfoot> 
+				<tr class="visible-xs"> 
+					<td class="text-center"><strong>Tổng 200.000 đ</strong>
+					</td> 
+				</tr> 
+				<tr> 
+					<td><a href="product.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+					</td> 
+					<td colspan="2" class="hidden-xs"> </td> 
+					<td class="hidden-xs text-center"><strong>Tổng tiền 420.000đ</strong>
+					</td> 
+					<td><a href="information.html" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+					</td> 
+				</tr> 
+			</tfoot> 
+		</table>
+		<!-- //Checkout -->
+	</div>
+</div>
+
+<div class="footer">
+	<p>Copyright © 2017 by M &amp; A Shop</p>
+</div> 
+<!-- /#footer -->
+<!-- /Footer -->
+
+<!-- Javascripts -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.singlePageNav.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/custom.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<!-- /Javascripts -->
+</body>
+</html>
