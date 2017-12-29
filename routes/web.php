@@ -11,17 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('product', function () {
-    return view('product/all');
-});
-Route::get('shirt', function () {
-    return view('product/shirt');
-});
-Route::get('t-shirt', function () {
-    return view('product/t-shirt');
-});
-Route::get('manage-product-ajax','ProductAjaxController@manageProductAjax');
-Route::resource('product-ajax', 'ProductAjaxController');
+Route::get('index', ['as'=>'index', 'uses'=>'PageController@getIndex']);
+
+Route::get('products', ['as'=>'products', 'uses'=>'PageController@getProducts']);
+
+Route::get('shirt', ['as'=>'shirt', 'uses'=>'PageController@getShirt']);
+
+Route::get('t-shirt', ['as'=>'t-shirt', 'uses'=>'PageController@getTshirt']);
+
