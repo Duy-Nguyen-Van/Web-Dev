@@ -11,11 +11,20 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::get('index', ['as'=>'index', 'uses'=>'PageController@getIndex']);
 
 Route::get('products', ['as'=>'products', 'uses'=>'PageController@getProducts']);
 
-Route::get('shirt', ['as'=>'shirt', 'uses'=>'PageController@getShirt']);
+Route::get('single', ['as'=>'single', 'uses'=>'PageController@getSingle']);
 
-Route::get('t-shirt', ['as'=>'t-shirt', 'uses'=>'PageController@getTshirt']);
+Route::get('checkout', ['as'=>'checkout', 'uses'=>'PageController@getCheckout']);
 
+Route::get('contact', ['as'=>'contact', 'uses'=>'PageController@getContact']);
+
+Route::get('account', ['as'=>'account', 'uses'=>'PageController@getAccount']);
+
+Route::get('register', ['as'=>'register', 'uses'=>'PageController@getRegister']);

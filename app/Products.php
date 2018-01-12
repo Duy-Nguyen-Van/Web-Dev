@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Products extends Model
 {
-    //
-    protected $table = "products";
+    //Connect to table products
+    protected $table = 'products';
 }

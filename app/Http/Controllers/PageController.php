@@ -3,28 +3,38 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Products;
 class PageController extends Controller
 {
     //
     public function getIndex() {
-        return view('pages.index');
+        $a = Products::select('*')->orderBy('id','desc')->take(3)->get();
+        return view('pages.index',compact('a'));
     }
 
     //
     public function getProducts() {
-        $a = Products::select('*')->paginate(6);
-        return view('pages.products', compact('a'));
+        return view('pages.products');
     }
 
-    public function getTshirt() {
-        $a = Products::select('*')->where('id_type', 1)->paginate(6);
-        return view('pages.t-shirt', compact('a'));
+    public function getSingle() {
+        return view('pages.single');
     }
 
-    public function getShirt() {
-        $a = Products::select('*')->where('id_type', 2)->paginate(6);
-        return view('pages.shirt', compact('a'));
+    public function getCheckout() {
+        return view('pages.checkout');
     }
+
+    public function getContact() {
+        return view('pages.contact');
+    }
+
+    public function getAccount() {
+        return view('pages.account');
+    }
+
+    public function getRegister() {
+        return view('pages.register');
+    }
+
 }
