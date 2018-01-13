@@ -31,7 +31,7 @@
 						</ul>
 						<ul>
 							<li class="text-info">Mật khẩu: </li>
-							<li><input type="password" value="" placeholder="Vui lòng nhập mật khẩu"></li>
+							<li><input type="password" value="" placeholder="Vui lòng nhập Email"></li>
 						</ul>
 						<ul>
 							<li class="text-info">Nhập lại mật khẩu:</li>

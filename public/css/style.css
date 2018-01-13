@@ -1030,11 +1030,11 @@ ul.tags_links li a:hover {
 }
 
 .new-product {
-	width: 78%;
+	width: 80%;
 	float: right;
 	background:rgba(245, 243, 243, 0.27);
-	min-height: 800px;
 	padding: 2em;
+	margin-right: 100px;
 }
 
 ul.product-top-list {
@@ -2451,6 +2451,7 @@ p.tab-text {
     font-size: 20px;
     letter-spacing: 1px;
     font-weight: 400;
+    margin-right: 35%;
 }
 
 p.left {
