@@ -171,7 +171,7 @@ img {
     margin-left: auto!important;*/
 }
 .banner {
-    background:url("../images/cover1.jpg") no-repeat 0px 0px;
+    background:url("../images/slide3.jpg") no-repeat 0px 0px;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -190,14 +190,14 @@ img {
 .banner-info h3 {
     font-size: 50px;
     font-weight: 400;
-    color: #ffffff;
+    color: #000000;
     padding: 0;
 }
 .shop a {
     text-decoration:none;
     padding:12px 20px;
-    border:1px solid #fff;
-    color:#fff;
+    border:1px solid #000;
+    color:#000;
     font-size:18px;
     letter-spacing:2px;
 }
