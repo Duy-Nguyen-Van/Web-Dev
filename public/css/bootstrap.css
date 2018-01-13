@@ -2549,7 +2549,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 40%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -3139,6 +3139,7 @@ fieldset[disabled] .btn-primary.active {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c;
+  font-size: 20px;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -3229,6 +3230,7 @@ fieldset[disabled] .btn-info.active {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #eea236;
+  font-size: 20px;
 }
 .btn-warning:hover,
 .btn-warning:focus,
