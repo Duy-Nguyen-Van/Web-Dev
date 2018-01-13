@@ -228,7 +228,7 @@ p.font-large{
     font-size: 18px;
 }
 
-.your-order-item .pull-left {
+.your-order-body .pull-left {
     float: left;
     font-size: 18px;
     color: #000;
@@ -236,7 +236,7 @@ p.font-large{
     margin-right: 5%;
     width: 40%;
     text-align: right;
-    margin-bottom: 10px;
+    margin-bottom: 50px; /*chỉnh distance đặt hàng*/
     margin-top: 10px;
 }
 
