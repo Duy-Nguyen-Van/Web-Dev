@@ -1962,7 +1962,7 @@ ul.women_pagenation li a:hover {
 }
 
 .reg ul li.text-info{
-	width: 38%;
+	width: 20%;
 	color: #816263;
 	font-size: 16px;
 	text-transform: uppercase;
@@ -1981,8 +1981,8 @@ ul.women_pagenation li a:hover {
 }
 
 .reg-form {
-	float: left;
-	width: 50%
+	width: 80%;
+	margin: 0 auto;
 }
 
 .reg-right {
