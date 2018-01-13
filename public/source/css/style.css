@@ -3449,3 +3449,7 @@ p.right {
 		font-size: 13px;
 	}
 }
+.quality { 
+width:10%; 
+display: inline !important;
+}

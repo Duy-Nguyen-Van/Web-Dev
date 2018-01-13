@@ -1323,6 +1323,7 @@ mark,
 }
 .text-center {
   text-align: center;
+
 }
 .text-justify {
   text-align: justify;
@@ -2549,7 +2550,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
