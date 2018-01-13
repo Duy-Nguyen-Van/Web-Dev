@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="icon" href="images/favicon.ico">
-<title>M &amp; A Shop</title>
+@section('content')
 <base href="{{asset('')}}">
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
