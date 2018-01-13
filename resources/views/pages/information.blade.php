@@ -5,14 +5,14 @@
 		<div class="dreamcrub">
 			<ul class="breadcrumbs">
 				<li class="home">
-					<a href="index.html" title="Go to Home Page">TRANG CHỦ</a>&nbsp;
+					<a href="{{route('index')}}" title="Go to Home Page">TRANG CHỦ</a>&nbsp;
 					<span>&gt;</span>
 				</li>
 				<li class="home">GIỎ HÀNG &nbsp;&gt;</li>
 				<li class="women">ĐẶT HÀNG</li>
 			</ul>
 			<ul class="previous">
-				<li><a href="index.html">Trang trước</a></li>
+				<li><a href="{{route('checkout')}}">QUAY LẠI</a></li>
 			</ul>
 			<div class="clearfix"></div>
 		</div>

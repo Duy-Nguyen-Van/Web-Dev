@@ -1,24 +1,26 @@
 @extends('master')
 @section('content')
-<div class="cart-items">
-	<div class="container">
-		<div class="dreamcrub">
-			<ul class="breadcrumbs">
-				<li class="home">
-					<a href="index.html" title="Go to Home Page">TRANG CHỦ</a>&nbsp;
-					<span>&gt;</span>
-				</li>
-				<li class="women">GIỎ HÀNG</li>
-			</ul>
-			<ul class="previous">
-				<li><a href="index.html">Trở về trang vừa truy cập</a></li>
-			</ul>
-			<div class="clearfix"></div>
-		</div>
-		<h2>GIỎ HÀNG CỦA TÔI (3)</h2>
-		<div class="cart-gd">
-			<script>
-				$(document).ready(function(c) {
+<!-- checkout -->
+	<div class="cart-items">
+		<div class="container">
+			<div class="dreamcrub">
+				<ul class="breadcrumbs">
+					<li class="home">
+						<a href="{{route('index')}}" title="Go to Home Page">TRANG CHỦ</a>&nbsp;
+						<span>&gt;</span>
+					</li>
+					<li class="women">
+						GIỎ HÀNG
+					</li>
+				</ul>
+				<ul class="previous">
+					<li><a href="{{route('index')}}">QUAY LẠI</a></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<h2>GIỎ HÀNG (2 sản phẩm)</h2>
+			<div class="cart-gd">
+				<script>$(document).ready(function(c) {
 					$('.close1').on('click', function(c){
 						$('.cart-header').fadeOut('slow', function(c){
 							$('.cart-header').remove();
@@ -33,81 +35,70 @@
 						<img src="images/l1.jpg" class="img-responsive" alt="">
 					</div>
 					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
+						<h3><a href="#"> Box Tee </a></h3>
 						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
+							<li><p>Giá: 150.000đ</p></li>
+							<li><p>Số lượng</p></li><li><input class="form-control text-center" value="1" type="number"></li>
 						</ul>
 						<div class="delivery">
-							<p>Service Charges : $10.00</p>
-							<span>Delivered in 1-1:30 hours</span>
-							<div class="clearfix"></div>
+							<p>Thành tiền : $10.00</p>
+							<div class="clea	rfix"></div>
 						</div>	
 					</div>
 					<div class="clearfix"></div>
+
 				</div>
 			</div>
-			<script>
-				$(document).ready(function(c) {
-					$('.close2').on('click', function(c){
-						$('.cart-header2').fadeOut('slow', function(c){
-							$('.cart-header2').remove();
-						});
-					});	  
-				});
-			</script>
-			<div class="cart-header2">
-				<div class="close2"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-					<div class="cart-item cyc">
-						<img src="images/l2.jpg" class="img-responsive" alt="">
-					</div>
-					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
-						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
-						</ul>
-						<div class="delivery">
-							<p>Service Charges : $10.00</p>
-							<span>Delivered in 3-3:30 hours</span>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
+			<script>$(document).ready(function(c) {
+				$('.close2').on('click', function(c){
+					$('.cart-header2').fadeOut('slow', function(c){
+						$('.cart-header2').remove();
+					});
+				});	  
+			});
+		</script>
+		<div class="cart-header2">
+			<div class="close2"> </div>
+			<div class="cart-sec simpleCart_shelfItem">
+				<div class="cart-item cyc">
+					<img src="images/l2.jpg" class="img-responsive" alt="">
 				</div>
-			</div>
-			<script>
-				$(document).ready(function(c) {
-					$('.close3').on('click', function(c){
-						$('.cart-header3').fadeOut('slow', function(c){
-							$('.cart-header3').remove();
-						});
-					});	  
-				});
-			</script>
-			<div class="cart-header3">
-				<div class="close3"> </div>
-				<div class="cart-sec simpleCart_shelfItem">
-					<div class="cart-item cyc">
-						<img src="images/l3.jpg" class="img-responsive" alt="">
-					</div>
-					<div class="cart-item-info">
-						<h3><a href="#"> Lorem Ipsum is not simply </a><span>Pickup time:</span></h3>
-						<ul class="qty">
-							<li><p>Min. order value:</p></li>
-							<li><p>FREE delivery</p></li>
-						</ul>
-						<div class="delivery">
-							<p>Service Charges : $10.00</p>
-							<span>Delivered On Tomorrow</span>
-							<div class="clearfix"></div>
-						</div>	
-					</div>
-					<div class="clearfix"></div>
+				<div class="cart-item-info">
+					<h3><a href="#"> Bae Striped Shirt </a></h3>
+					<ul class="qty">
+						<li><p>Giá: 400.000đ</p></li>
+						<li><p>Số lượng</p></li><li><input class="form-control text-center" value="1" type="number"></li>
+					</ul>
+					<div class="delivery">
+						<p>Thành tiền</p>
+						<div class="clearfix"></div>
+					</div>	
 				</div>
+				<div class="clearfix"></div>
+
 			</div>
 		</div>
-	</div>
+		<script>$(document).ready(function(c) {
+			$('.close3').on('click', function(c){
+				$('.cart-header3').fadeOut('slow', function(c){
+					$('.cart-header3').remove();
+				});
+			});	  
+		});
+	</script>
 </div>
+<!-- 		<a href="products.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+		<a href="#" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+ -->
+		<div class="col-md-3 col-md-offset-3">
+			<a href="{{route('products')}}" class="btn btn-warning">Tiếp tục mua hàng</a>
+		</div>
+ 		<div class="col-md-3 col-md-offset-3">
+ 			<a href="{{route('information')}}" class="btn btn-success">Đặt hàng</a>
+ 		</div>
+</div>
+</div>
+	<br>
+
+<!-- //checkout -->	
 @endsection
