@@ -23,6 +23,8 @@ Route::get('single', ['as'=>'single', 'uses'=>'PageController@getSingle']);
 
 Route::get('checkout', ['as'=>'checkout', 'uses'=>'PageController@getCheckout']);
 
+Route::get('information', ['as'=>'information', 'uses'=>'PageController@getInformation']);
+
 Route::get('contact', ['as'=>'contact', 'uses'=>'PageController@getContact']);
 
 Route::get('account', ['as'=>'account', 'uses'=>'PageController@getAccount']);

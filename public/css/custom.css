@@ -1,0 +1,163 @@
+
+.container-form{
+	margin-left: 10px;
+	margin-bottom: 400px;
+	margin-right: 10px;
+}
+
+/*#content-form{
+	margin-left: 50px;
+	margin-bottom: 50px;
+}*/
+
+.form-block{
+	margin-left: 0px;
+}
+
+.row-form{
+	margin-left: 25px;
+}
+
+.form-block label{
+	width: 150px;
+	height: 30px;
+	margin-left: 0px;
+	margin-right: 50px;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+
+h5.h9{
+	text-align: left;
+    height: 55px;
+    background-color: #f8f8f8;
+    padding: 0 20px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    /*font-size: 24px;*/
+    color: #484747;
+    line-height: 55px;
+}
+
+.your-order {
+    border: 1px solid #e8e8e8;
+    padding-bottom: 35px;
+}
+
+.your-order-head {
+    height: 55px;
+    background-color: #f8f8f8;
+    padding: 0 10px;
+    border-top: 0px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.your-order-head h5 {
+    /*font-size: 24px;*/
+    color: #484747;
+    line-height: 55px;
+    width: 289px;
+    height: 55px;
+    padding: 0 20px;
+    display: block;
+    font-size: 0.93em;
+    /*-webkit-margin-before: 1.67em;*/
+    /*-webkit-margin-after: 1.67em;*/
+    /*-webkit-margin-start: 0px;*/
+    /*-webkit-margin-end: 0px;*/
+    /*font-weight: bold;*/
+}
+
+
+.beta-btn.primary {
+    color: white;
+    padding: 10px 20px;
+    line-height: 100%;
+}
+
+.beta-btn{
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #3a5c83;
+	border-radius: 2px 2px 2px 2px;
+}
+
+style.css:1376
+.your-order .beta-btn {
+    background-color: #3a5c83;
+    color: #fff!important;
+}
+
+/*@media (max-width: 767px)
+style.css:4586
+.beta-btn {
+    margin-bottom: 5px;
+}*/
+
+.text-center {
+    text-align: center;
+}
+
+
+.payment_methods li label {
+    font-size: 15px;
+    color: #000;
+}
+
+ul, ol, ul label, ol label {
+    font-weight: 300;
+}
+
+div, form, fieldset, legend, label {
+    margin: 0;
+    padding: 0;
+}
+
+bootstrap.min.css:7
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+label {
+    cursor: default;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.payment_methods li {
+    margin-bottom: 10px;
+}
+
+ul.payment_methods, .woocommerce-page #payment ul.payment_methods {
+    text-align: left;
+    padding: 1em;
+    margin: 0;
+    list-style: none outside;
+}
+
+.media>.pull-left {
+    margin-right: 10px;
+}
+bootstrap.min.css:7
+.pull-left {
+    float: left!important;
+}
+style.css:110
+img {
+    border: none;
+    max-width: 100%;
+}
+bootstrap.min.css:7
+img {
+    vertical-align: middle;
+}
