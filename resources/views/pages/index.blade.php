@@ -1,30 +1,24 @@
 @extends('master')
 @section('content')
+<title>M &amp; A Shop</title>
 <div class="banner">
 	<div class="container">
 		<div class="banner-bottom">
-			{{-- <div class="banner-bottom-left">
-				<h2>B<br>U<br>Y</h2>
-			</div> --}}
-			{{-- <div class="banner-bottom-right"> --}}
 				<div  class="callbacks_container">
 					<ul class="rslides" id="slider4">
 						<li>
 							<div class="banner-info">
 								<h3>Chào mừng đến với M&amp;A </h3>
-								{{-- <p>Start your shopping here...</p> --}}
 							</div>
 						</li>
 						<li>
 							<div class="banner-info">
 							   <h3>Phong cách ăn mặc</h3>
-								{{-- <p>Start your shopping here...</p> --}}
 							</div>
 						</li>
 						<li>
 							<div class="banner-info">
 							  <h3>Pack your Bag</h3>
-								{{-- <p>Start your shopping here...</p> --}}
 							</div>								
 						</li>
 					</ul>
@@ -48,7 +42,6 @@
 								$('.events').append("<li>after event fired.</li>");
 							}
 						});
-
 					});
 				</script>
 			{{-- </div> --}}
@@ -86,14 +79,14 @@
 			<header>
 				<h3 class="head text-center">Latest Products</h3>
 			</header>
-			@foreach($a as $b)
+			@foreach($lastest as $lastestItem)
 				<div class="col-md-4 product simpleCart_shelfItem text-center">
-					 <a href="single.html"><img src="{{$b->image}}" alt="" /></a>  
+					 <a href="{{route('single')}}"><img src="{{$lastestItem->image}}" alt="" /></a>  
 					<div class="mask">
-						<a href="single.html">Quick View</a>
+						<a href="{{route('single')}}">Quick View</a>
 					</div>
-					<a class="product_name" href="single.html">{{$b->name}}</a>
-					<p><a class="item_add" href="#"><i></i> <span class="item_price">${{$b->price}}</span></a></p>
+					<a class="product_name" href="single.html">{{$lastestItem->name}}</a>
+					<p><a class="item_add" href="#"><i></i> <span class="item_price">${{$lastestItem->price}}</span></a></p>
 				</div>
 			@endforeach
 			<div class="clearfix"></div>
@@ -103,38 +96,16 @@
 
 <div class="other-products">
 	<div class="container">
-		<h3 class="like text-center">Featured Collection</h3>        			
+		<h3 class="like text-center">Sale Products</h3>        			
 		<ul id="flexiselDemo3">
-			<li><a href="single.html"><img src="images/l1.jpg" class="img-responsive" alt="" /></a>
+		@foreach($sale as $saleItem)
+			<li><a href="{{route('single')}}"><img src="{{$saleItem->image}}" class="img-responsive" alt="" /></a>
 				<div class="product liked-product simpleCart_shelfItem">
-					<a class="like_name" href="single.html">perfectly simple</a>
-					<p><a class="item_add" href="#"><i></i> <span class=" item_price">$759</span></a></p>
+					<a class="like_name" href="{{route('single')}}">{{$saleItem->name}}</a>
+					<p><a class="item_add" href="#"><i></i> <span class=" item_price">{{$saleItem->promotion}}</span></a></p>
 				</div>
 			</li>
-			<li><a href="single.html"><img src="images/l2.jpg" class="img-responsive" alt="" /></a>						
-				<div class="product liked-product simpleCart_shelfItem">
-					<a class="like_name" href="single.html">praising pain</a>
-					<p><a class="item_add" href="#"><i></i> <span class=" item_price">$699</span></a></p>
-				</div>
-			</li>
-			<li><a href="single.html"><img src="images/l3.jpg" class="img-responsive" alt="" /></a>
-				<div class="product liked-product simpleCart_shelfItem">
-					<a class="like_name" href="single.html">Neque porro</a>
-					<p><a class="item_add" href="#"><i></i> <span class=" item_price">$329</span></a></p>
-				</div>
-			</li>
-			<li><a href="single.html"><img src="images/l4.jpg" class="img-responsive" alt="" /></a>
-				<div class="product liked-product simpleCart_shelfItem">
-					<a class="like_name" href="single.html">equal blame</a>
-					<p><a class="item_add" href="#"><i></i> <span class=" item_price">$499</span></a></p>
-				</div>
-			</li>
-			<li><a href="single.html"><img src="images/l5.jpg" class="img-responsive" alt="" /></a>
-				<div class="product liked-product simpleCart_shelfItem">
-					<a class="like_name" href="single.html">perfectly simple</a>
-					<p><a class="item_add" href="#"><i></i> <span class=" item_price">$649</span></a></p>
-				</div>
-			</li>
+		@endforeach
 		</ul>
 		<script type="text/javascript">
 			$(window).load(function() {

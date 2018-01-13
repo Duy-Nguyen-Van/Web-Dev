@@ -97,11 +97,7 @@
 											<div class="clearfix"></div>
 										</div>
 
-										<div class="your-order-item">
-											<div class="pull-left"><p class="your-order-f18">Tổng tiền: 270.000đ</p></div>
-											<!-- <div class="pull-right"><h5 class="color-black">270.000đ</h5></div> -->
-											<div class="clearfix"></div>
-										</div>
+										
 
 									</div>
 
@@ -109,7 +105,12 @@
 									<div class="your-order-head"><h5><b>Hình thức thanh toán</b></h5></div>
 
 									<div class="your-order-body">
-										<ul class="payment_methods methods">
+										<!-- <div class="your-order-item"> -->
+											<div class="pull-left"><p class="your-order-f18">Tổng tiền: 270.000đ</p></div>
+											<!-- <div class="pull-right"><h5 class="color-black">270.000đ</h5></div> -->
+											<div class="clearfix"></div>
+										<!-- </div> -->
+										<!-- <ul class="payment_methods methods">
 											<li class="payment_method_bacs">
 												<input id="payment_method_bacs" type="radio" class="input-radio" name="payment_method" value="COD" checked="checked" data-order_button_text="">
 												<label for="payment_method_bacs">Thanh toán khi nhận hàng </label>
@@ -122,7 +123,7 @@
 													Thông tin tài khoản
 												</div>						
 											</li>
-										</ul>
+										</ul> -->
 									</div>
 
 

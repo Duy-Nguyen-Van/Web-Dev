@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<title>Liên hệ</title>
 <div class="contact">
 	<div class="container">
 		<div class="dreamcrub">

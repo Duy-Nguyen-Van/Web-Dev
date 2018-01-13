@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<title>Sản phẩm</title>
 <div class="container">
 	<div class="products-page">
 		<div class="products">

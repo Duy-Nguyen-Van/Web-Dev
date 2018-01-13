@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<title>Giỏ hàng</title>
 <!-- checkout -->
 	<div class="cart-items">
 		<div class="container">
