@@ -480,12 +480,12 @@ ul.multi-column-dropdown h6 {
     text-align: center;
 }
 
-.banner-info h3 {
+/*.banner-info h3 {
     font-size: 50px;
     font-weight: 400;
     color: #000000;
 	padding: 0;
-}
+}*/
 
 .banner-info p {
 	font-size: 20px;
@@ -498,14 +498,14 @@ ul.multi-column-dropdown h6 {
     float: right;
 }
 
-.shop a {
+/*.shop a {
 	text-decoration:none;
 	padding:12px 20px;
 	border:1px solid #000;
 	color:#000;
 	font-size:18px;
 	letter-spacing:2px;
-}
+}*/
 
 .shop a:hover {
 	color:#fff;

@@ -6,7 +6,7 @@
 			{{-- <div class="banner-bottom-left">
 				<h2>B<br>U<br>Y</h2>
 			</div> --}}
-			<div class="banner-bottom-right">
+			{{-- <div class="banner-bottom-right"> --}}
 				<div  class="callbacks_container">
 					<ul class="rslides" id="slider4">
 						<li>
@@ -51,7 +51,7 @@
 
 					});
 				</script>
-			</div>
+			{{-- </div> --}}
 			<div class="clearfix"> </div>
 		</div>
 		<div class="shop">
