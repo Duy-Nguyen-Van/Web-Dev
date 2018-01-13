@@ -87,9 +87,9 @@
 													<img width="25%" src="http://product.hstatic.net/1000161656/product/ssstutter-product-work-shirt-blue_master.jpg" alt="" class="pull-left">
 													<div class="media-body">
 														<p class="font-large">Box Tee</p>
-														<span class="color-gray your-order-info">Color: Yellow</span>
-														<span class="color-gray your-order-info">Size: M</span>
-														<span class="color-gray your-order-info">Qty: 1</span>
+														<span class="color-gray your-order-info">Color: Yellow</span><br>
+														<span class="color-gray your-order-info">Size: M</span><br>
+														<span class="color-gray your-order-info">Qty: 1</span><br>
 													</div>
 												</div>
 												<!-- end one item -->
@@ -98,8 +98,8 @@
 										</div>
 
 										<div class="your-order-item">
-											<div class="pull-left"><p class="your-order-f18">Tổng tiền:</p></div>
-											<div class="pull-right"><h5 class="color-black">270.000đ</h5></div>
+											<div class="pull-left"><p class="your-order-f18">Tổng tiền: 270.000đ</p></div>
+											<!-- <div class="pull-right"><h5 class="color-black">270.000đ</h5></div> -->
 											<div class="clearfix"></div>
 										</div>
 

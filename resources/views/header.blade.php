@@ -35,7 +35,7 @@
 		        </button>
 				<div class="logo">
 					{{-- <h1><a href="{{route('index')}}"><span>M &amp; A</span> Shop</a></h1> --}}
-					<img src="images/logo.jpg">
+					<img src="images/rsz_logo1.png">
 				</div>
 		    </div>
 	    	<!--/.navbar-header-->

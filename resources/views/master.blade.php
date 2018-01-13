@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" href="images/title_logo.ico">
+<link rel="icon" href="images/favicon.ico">
 <title>M &amp; A Shop</title>
 <base href="{{asset('')}}">
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />

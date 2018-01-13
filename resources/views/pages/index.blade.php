@@ -55,7 +55,7 @@
 			<div class="clearfix"> </div>
 		</div>
 		<div class="shop">
-			<a href="single.html">SHOP COLLECTION NOW</a>
+			<a href="{{route('products')}}">MUA NGAY</a>
 		</div>
 	</div>
 </div>
