@@ -1708,6 +1708,7 @@ ul.women_pagenation li.active a, ul.women_pagenation li a:hover {
     font-size: 20px;
     padding-bottom: 18px;
     font-weight: 600;
+    margin-left: 80px;
 }
 
 .login-right h3 {
@@ -1741,6 +1742,7 @@ li.home a {
 	-o-transition: 0.5s all;
 	display: inline-block;
 	text-transform: uppercase;
+	margin-left: 80px;
 }
 
 .acount-btn:hover, .login-right input[type="submit"]:hover {
@@ -1759,7 +1761,7 @@ li.home a {
 
 .login-right span {
 	color: #555;
-	font-size: 1em;
+	font-size: 1.5em;
 	padding-bottom: 0.2em;
 	display: block;
 	text-transform: uppercase;
@@ -1769,7 +1771,7 @@ li.home a {
 	border: 1px solid #EEE;
 	outline-color:#CACACA;
 	width: 96%;
-	font-size: 13px;
+	font-size: 15px;
 	padding: 8px;
 }
 
@@ -1777,7 +1779,7 @@ li.home a {
 	border: 1px solid #EEE;
 	outline-color:#CACACA;
 	width: 96%;
-	font-size: 13px;
+	font-size: 15px;
 	padding: 8px;
 }
 

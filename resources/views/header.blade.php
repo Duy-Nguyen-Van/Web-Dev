@@ -4,8 +4,8 @@
 		<div class="container">
 			<div class="header-top-left">
 				<ul>
-					<li><a href="{{route('account')}}"><span class="glyphicon glyphicon-user"> </span>Login</a></li>
-					<li><a href="{{route('register')}}"><span class="glyphicon glyphicon-lock"> </span>Create an Account</a></li>			
+					<li><a href="{{route('account')}}"><span class="glyphicon glyphicon-user"> </span>ĐĂNG NHẬP</a></li>
+					<li><a href="{{route('register')}}"><span class="glyphicon glyphicon-lock"> </span>ĐĂNG KÝ</a></li>			
 				</ul>
 			</div>
 			<div class="header-right">

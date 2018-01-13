@@ -13,30 +13,28 @@
                     <li class="women">ĐĂNG NHẬP</li>
                 </ul>
                 <ul class="previous">
-                	<li><a href="index.html">Trở về trang vừa truy cập</a></li>
+                	<li><a href="index.html">QUAY LẠI</a></li>
                 </ul>
                 <div class="clearfix"></div>
 			</div>
 			<div class="account_grid">
 				<div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
-					<h2>NEW CUSTOMERS</h2>
-					<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
-					<a class="acount-btn" href="{{route('register')}}">Create an Account</a>
+					<h2>BẠN CHƯA CÓ TÀI KHOẢN?</h2>
+					<a class="acount-btn" href="{{route('register')}}">TẠO TÀI KHOẢN</a>
 				</div>
 				<div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
-					<h3>REGISTERED CUSTOMERS</h3>
-					<p>If you have an account with us, please log in.</p>
+					<h3>ĐĂNG NHẬP</h3>
 					<form>
 						<div>
-							<span>Email Address<label>*</label></span>
-							<input type="text"> 
+							<span>EMAIL<label>*</label></span>
+							<input type="text" placeholder="Vui lòng nhập Email"> 
 						</div>
 						<div>
-							<span>Password<label>*</label></span>
-							<input type="password"> 
+							<span>MẬT KHẨU<label>*</label></span>
+							<input type="password" placeholder="Vui lòng nhập Email"> 
 						</div>
-						<a class="forgot" href="#">Forgot Your Password?</a>
-						<input type="submit" value="Login">
+						<a class="forgot" href="#">Quên mật khẩu?</a>
+						<input type="submit" value="ĐĂNG NHẬP">
 					</form>
 				</div>	
 				<div class="clearfix"> </div>
