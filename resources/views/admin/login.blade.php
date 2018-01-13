@@ -1,13 +1,10 @@
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Khóa Học Lập Trình Laravel Framework 5.x Tại Khoa Phạm">
-    <meta name="author" content="">
 
-    <title>Admin - Khoa Phạm</title>
+    <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,15 +17,21 @@
 
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
-
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
+                    <div class="col-lg-12" style="margin-top: 18px;">
+                        @include('admin.blocks.error')
+                        @if(Session::has('flash_message'))
+                                <div class="alert alert-{{Session::get('flash_level')}}">
+                                    {{ Session::get('flash_message')}}
+                            </div>
+                        @endif
+                    </div>
                     <div class="panel-heading">
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
@@ -61,7 +64,5 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="dist/js/sb-admin-2.js"></script>
-
 </body>
-
 </html>

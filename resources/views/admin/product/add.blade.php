@@ -12,20 +12,25 @@
                 <!-- /.col-lg-12 -->
                 <div class="col-lg-7" style="padding-bottom:120px">
                     @include('admin.blocks.error')
-                     {{--  Them hình thì cần enctype  --}}
                     <form action="{{route('admin.product.getAdd')}}" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         
                         <div class="form-group">
                             <label>Name</label>
-                            <input class="form-control" name="txtName" placeholder="Nhập tên sản phẩm" value="{!! old('txtName') !!}" />
+                            <input class="form-control" name="txtName" placeholder="Nhập tên sản phẩm" value="{!! old('txtName' !!}" />
                         </div>
 
                         <div class="form-group">
                             <label>Category</label>
                                 <select class="form-control" name="txtCategory">
-                                    <option selected value="1">Áo Thun</option>
-                                    <option value="2">Áo Sơ Mi</option>
+                                    <!-- <option selected value="1">Áo Thun</option>
+                                    <option value="2">Áo Sơ Mi</option> -->
+                                    <?php  
+                                        $cate = DB::table('type_products')->select('id','name')->get();  
+                                    ?>
+                                    @foreach($cate as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option>
+                                    @endforeach
                                 </select>
                         </div>
 
