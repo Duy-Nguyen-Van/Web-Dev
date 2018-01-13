@@ -19,6 +19,7 @@
 }
 
 .form-block label{
+    font-size: 18px;
 	width: 150px;
 	height: 30px;
 	margin-left: 0px;
@@ -36,9 +37,9 @@ h5.h9{
     border-top: 1px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
     border-left: 1px solid #e8e8e8;
-    /*font-size: 24px;*/
     color: #484747;
     line-height: 55px;
+    font-size: 22px;
 }
 
 .your-order {
@@ -52,10 +53,11 @@ h5.h9{
     padding: 0 10px;
     border-top: 0px solid #e8e8e8;
     border-bottom: 1px solid #e8e8e8;
+    font-size: 22px;
 }
 
 .your-order-head h5 {
-    /*font-size: 24px;*/
+    /*font-size: 22px;*/
     color: #484747;
     line-height: 55px;
     width: 289px;
@@ -75,6 +77,7 @@ h5.h9{
     color: white;
     padding: 10px 20px;
     line-height: 100%;
+    font-size: 17px;
 }
 
 .beta-btn{
@@ -105,7 +108,7 @@ style.css:4586
 
 
 .payment_methods li label {
-    font-size: 15px;
+    font-size: 17px;
     color: #000;
 }
 
@@ -149,9 +152,13 @@ ul.payment_methods, .woocommerce-page #payment ul.payment_methods {
     margin-right: 10px;
 }
 bootstrap.min.css:7
+
 .pull-left {
-    float: left!important;
+    /*float: left!important;*/
 }
+
+
+
 style.css:110
 img {
     border: none;
@@ -164,14 +171,14 @@ img {
 .shop
 {
     margin-top: 100px!important;
-    margin-right: 490px!important;
+    margin-right: 420px!important;
     /*padding-right: 15px!important;
     padding-left: 15px!important;
     margin-right: auto!important;
     margin-left: auto!important;*/
 }
 .banner {
-    background:url("../images/slide3.jpg") no-repeat 0px 0px;
+    background:url("../images/cover1.jpg") no-repeat 0px 0px;
     background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -190,16 +197,16 @@ img {
 .banner-info h3 {
     font-size: 50px;
     font-weight: 400;
-    color: #000000;
+    color: #ffffff;
     padding: 0;
 }
 .shop a {
     text-decoration:none;
     padding:12px 20px;
-    border:1px solid #000;
-    color:#000;
-    font-size:18px;
+    border:1px solid #fff;
+    color:#fff;
     letter-spacing:2px;
+    font-size:18px;
 }
 .banner-bottom
 {
@@ -208,4 +215,38 @@ img {
 .callbacks_tabs
 {
     padding-left: 50px;
+}
+
+
+p.font-large{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.media-body .color-gray{
+    font-size: 18px;
+}
+
+.your-order-item .pull-left {
+    float: left;
+    font-size: 18px;
+    color: #000;
+    /*letter-spacing: 2px;*/
+    margin-right: 5%;
+    width: 40%;
+    text-align: right;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h5.color-black{
+    margin-right: 200px;
+    float: left;
+    font-size: 18px;
+    color: red;
+    /*letter-spacing: 2px;*/
+    /*margin-right: 5%;*/
+    width: 40%;
+    /*text-align: left;*/
 }
