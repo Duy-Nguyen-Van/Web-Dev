@@ -161,3 +161,25 @@ bootstrap.min.css:7
 img {
     vertical-align: middle;
 }
+.shop
+{
+    margin-top: 100px!important;
+    margin-right: 100px!important;
+}
+.banner {
+    background:url("../images/cover.jpg") no-repeat 0px 0px;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -webkit-background-size: cover;
+    min-height: 705px;
+}
+.banner-top
+{
+    padding-top: 0px!important;
+}
+.navbar-nav
+{
+    padding-top: 20px!important;
+}

@@ -34,7 +34,8 @@
 			        <span class="icon-bar"></span>
 		        </button>
 				<div class="logo">
-					<h1><a href="{{route('index')}}"><span>M &amp; A</span> Shop</a></h1>
+					{{-- <h1><a href="{{route('index')}}"><span>M &amp; A</span> Shop</a></h1> --}}
+					<img src="images/logo.jpg">
 				</div>
 		    </div>
 	    	<!--/.navbar-header-->
