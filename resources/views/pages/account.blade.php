@@ -19,6 +19,10 @@
 			</div>
 			<div class="account_grid">
 				<div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
+					<h2>ĐĂNG NHẬP BẰNG</h2>
+					<div class="col-md-6"><a href="#"><img src="images/1.png"></a></div>
+					<div class="col-md-6"><a href="#"><img src="images/2.png"></a></div>
+
 					<h2>BẠN CHƯA CÓ TÀI KHOẢN?</h2>
 					<a class="acount-btn" href="{{route('register')}}">TẠO TÀI KHOẢN</a>
 				</div>

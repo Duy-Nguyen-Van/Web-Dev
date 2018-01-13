@@ -1716,6 +1716,7 @@ ul.women_pagenation li.active a, ul.women_pagenation li a:hover {
     font-size: 20px;
     padding-bottom: 18px;
     font-weight: 600;
+    margin-left: 100px;
 }
 
 li.home a {
@@ -1753,6 +1754,7 @@ li.home a {
 
 .login-right form {
 	padding: 1em 0;
+	margin-left: 100px;
 }
 
 .login-right form div {
@@ -1770,7 +1772,7 @@ li.home a {
 .login-right input[type="text"] {
 	border: 1px solid #EEE;
 	outline-color:#CACACA;
-	width: 96%;
+	width: 70%;
 	font-size: 15px;
 	padding: 8px;
 }
@@ -1778,7 +1780,7 @@ li.home a {
 .login-right input[type="password"] {
 	border: 1px solid #EEE;
 	outline-color:#CACACA;
-	width: 96%;
+	width: 70%;
 	font-size: 15px;
 	padding: 8px;
 }
