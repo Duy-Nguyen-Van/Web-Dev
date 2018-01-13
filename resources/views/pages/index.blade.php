@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<title>M &amp; A Shop</title>
 <div class="banner">
 	<div class="container">
 		<div class="banner-bottom">

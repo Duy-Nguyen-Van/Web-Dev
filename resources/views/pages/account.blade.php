@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<title>Đăng nhập</title>
 <div class="content">
 	<div class="container">
 		<div class="login-page">

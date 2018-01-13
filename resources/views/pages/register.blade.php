@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<title>Đăng ký</title>
 <div class="registration-form">
 	<div class="container">
 		<div class="dreamcrub">
