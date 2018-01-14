@@ -12,7 +12,7 @@
 				<li class="women">ĐĂNG KÍ</li>
 			</ul>
 			<ul class="previous">
-				<li><a href="index.html">QUAY LẠI</a></li>
+				<li><a href="{{redirect()->getUrlGenerator()->previous()}}">QUAY LẠI</a></li>
 			</ul>
 			<div class="clearfix"></div>
 		</div>
