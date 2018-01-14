@@ -193,6 +193,8 @@ img {
 .navbar-nav
 {
     padding-top: 20px!important;
+    /*margin-right: 460px!important;
+    margin-top: 0px!important;*/
 }
 .banner-info h3 {
     font-size: 50px;
@@ -262,4 +264,10 @@ h5.color-black{
 .social
 {
     padding-top: 30px;
+}
+.collapse .shop
+{
+    margin-top: 100px!important;
+    margin-right: 200px!important;
+}
 }
