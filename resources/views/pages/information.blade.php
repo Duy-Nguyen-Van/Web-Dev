@@ -67,7 +67,7 @@
 												@foreach($content as $cart_detail)
 												<!--  one item	-->
 												<div class="media">
-													<!-- <img width="25%" src="{{$cart_detail->options->img}}" alt="" class="pull-left"> -->
+													<img width="25%" src="{{$cart_detail->options->img}}" alt="" class="pull-left"> 
 													<div class="media-body">
 														<p class="font-large">{{$cart_detail->name}}</p>
 														<!-- <span class="color-gray your-order-info">Size: M</span><br> -->
