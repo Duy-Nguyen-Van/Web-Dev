@@ -164,7 +164,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
-
+        Laravel\Socialite\SocialiteServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -227,7 +227,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+<<<<<<< HEAD
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+=======
+        'Socialite' => Laravel\Socialite\Facedes\Socialite::class,
+>>>>>>> 48cb7def8979ef1985e6ae3b3980abb02508ba6a
     ],
 
 ];
