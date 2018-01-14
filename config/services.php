@@ -34,6 +34,7 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+<<<<<<< HEAD
 
     'facebook' => [
         'client_id'     => '394355544350498',
@@ -47,4 +48,6 @@ return [
         'redirect'      => 'https://localhost:8888/auth/google/callback',
     ],
 
+=======
+>>>>>>> 8ac5d59d5a92241ee9840c48c75eb4e57e3861ec
 ];

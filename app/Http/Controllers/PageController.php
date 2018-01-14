@@ -8,6 +8,7 @@ use App\Http\Requests\InformationRequest;
 use App\Products;
 use App\Type_products;
 use App\User;
+use App\Customer;
 use App\Bills;
 use App\Bill_detail;
 use Hash;
@@ -120,6 +121,17 @@ class PageController extends Controller
     public function postPayment(Request $req){
         $content =  Cart::content();
         $total = Cart::subtotal();
+
+        $customer = new Customer;
+        $customer->name = $req->txtName;
+        // $customer->gender = $req->name;
+        $customer->email = $req->txtEmail;
+        $customer->address = $req->txtAddress;
+        $customer->phone_number = $req->txtPhone;
+        $customer->note = $req->txtNote;
+        $customer->save();
+
+
         $bill = new Bills;
         $bill->id_customer = 0;
         $bill->date_order = date('Y-m-d');

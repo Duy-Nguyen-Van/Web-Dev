@@ -39,14 +39,14 @@
 				<div class="cart-item-info">
 					<h3>{{$cart_detail->name}}</h3>
 					<ul class="qty">
-						<li><p>Giá: {{$cart_detail->price}} VNĐ</p></li>
+						<li><p>Giá: {{number_format($cart_detail->price,3)}} VNĐ</p></li>
 						<li><p>Số lượng</p></li><li><input class="form-control text-center" id="qty" value="{{$cart_detail->qty}}" type="number"></li>
 						<a class="updatecart" id="{{$cart_detail->rowId}}">
 							<button>Cập nhật</button>
 						</a>
 					</ul>
 					<div class="delivery">				
-						<p>Thành tiền : {{$cart_detail->qty*$cart_detail->price}} VNĐ</p>
+						<p>Thành tiền : {{number_format($cart_detail->qty*$cart_detail->price,3)}} VNĐ</p>
 						<div class="clearfix"></div>
 					</div>	
 				</div>			
@@ -56,12 +56,12 @@
 		@endforeach
 		<hr>
 		<div class="delivery" style="margin-left: 24%">				
-			<p>Tổng tiền : {{$total}} VND</p>
+			<p>Tổng tiền : {{number_format($total,3)}} VND</p>
 			<div class="clearfix"></div>
 		</div>	
 		<div class="clearfix"></div>
 		<div class="col-md-3 col-md-offset-3" style="margin-top: 20px;">
-			<a href="{{route('index')}}" class="btn btn-warning">Tiếp tục mua hàng</a>
+			<a href="{{route('products',0)}}" class="btn btn-warning">Tiếp tục mua hàng</a>
 		</div>
  		<div class="col-md-3 col-md-offset-3" style="margin-top: 20px;">
 			<a href="{{route('information')}}" class="btn btn-success">Đặt hàng</a>

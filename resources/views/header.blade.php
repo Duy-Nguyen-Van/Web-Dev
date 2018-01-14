@@ -11,7 +11,7 @@
 			<div class="header-right">
 				<div class="cart box_1">
 					<a href="{{route('checkout')}}">
-						<h3>{{$total}} VNĐ - 
+						<h3>{{number_format($total,3)}} VNĐ - 
 							@if($count == 0)
 								Giỏ trống
 							@else
