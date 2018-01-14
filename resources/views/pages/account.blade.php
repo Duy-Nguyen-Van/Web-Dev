@@ -22,8 +22,8 @@
 					<h2>BẠN CHƯA CÓ TÀI KHOẢN?</h2>
 					<a class="acount-btn" href="{{route('register')}}">TẠO TÀI KHOẢN</a>
 					<h2 class="social">ĐĂNG NHẬP BẰNG</h2>
-					<div class="facebook col-md-6"><a href="{!! URL::route('auth/facebook') !!}"><img src="images/1.png"></a></div>
-					<div class="google col-md-6"><a href="{!! URL::route('auth/google') !!}"><img src="images/2.png"></a></div>
+					<div class="facebook col-md-6"><a href="#"><img src="images/1.png"></a></div>
+					<div class="google col-md-6"><a href="#"><img src="images/2.png"></a></div>
 				</div>
 				<div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
 					<h3>ĐĂNG NHẬP</h3>
