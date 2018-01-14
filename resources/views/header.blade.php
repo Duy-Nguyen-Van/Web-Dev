@@ -11,7 +11,7 @@
 			<div class="header-right">
 					<div class="cart box_1">
 						<a href="{{route('checkout')}}">
-							<h3> <span class="simpleCart_total"> VND 0.00 </span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)<img src="source/images/bag.png" alt=""></h3>
+							<h3> <span class="simpleCart_total">0.00 VNĐ</span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)<img src="source/images/bag.png" alt=""></h3>
 						</a>	
 						<p><a href="javascript:;" class="simpleCart_empty">Làm rỗng</a></p>
 						<div class="clearfix"> </div>
@@ -43,8 +43,16 @@
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		        <ul class="nav navbar-nav">
 					<li><a href="{{route('index')}}">TRANG CHỦ</a></li>
-					<li><a href="{{route('products')}}">ÁO THUN</a></li>
-					<li><a href="{{route('products')}}">ÁO SƠ MI</a></li>
+					<li class="dropdown">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown">LOẠI SẢN PHẨM<b class="caret"></b></a>
+			            <ul class="dropdown-menu multi-column " style="width: 170px;"> 
+							<ul class="multi-column-dropdown">
+								@foreach($cate as $cate_type)
+									<li style="text-align: center;"><a href="{{route('products', $cate_type->id)}}">{{$cate_type->name}}</a></li>
+								@endforeach
+							</ul>
+			            </ul>
+			        </li>
 					<li><a href="{{route('contact')}}">LIÊN HỆ</a></li>
 		        </ul>
 		    </div>

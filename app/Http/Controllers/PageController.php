@@ -3,33 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CreateUserAccountRequest;
 use App\Products;
 use App\Type_products;
+use App\User;
+use Hash;
 
 class PageController extends Controller
 {
     public function getIndex() {
         $lastest = Products::select('*')->orderBy('id','desc')->take(3)->get();
-        $sale = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(6)->get();
+        $sale = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(4)->get();
         return view('pages.index', compact('lastest', 'sale'));
     }
 
     public function getProducts($type) {
         $cate_product = Products::where('id_type',$type)->paginate(6);
-        $cate = Type_products::All();
-        $sale_product = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(6)->get();
-        return view('pages.products',compact('cate_product','cate','sale_product'));
+        $sale = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(4)->get();
+        return view('pages.products',compact('cate_product','sale'));
     }
 
     public function getSingle(Request $req) {
-        $Detail_product = Products::where('id',$req->id)->first();
-        $sale_product = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(6)->get();
-        $cate = Type_products::All();
-        return view('pages.single',compact('Detail_product','sale_product','cate'));
+        $detail = Products::where('id',$req->id)->get();
+        return view('pages.single',compact('detail'));
     }
 
     public function getCheckout() {
         return view('pages.checkout');
+        
     }
 
     public function getInformation() {
@@ -48,4 +49,13 @@ class PageController extends Controller
         return view('pages.register');
     }
 
+    public function postRegister(CreateUserAccountRequest $req) {
+        $user = new User();
+        $user->email = $req->txtEmail;
+        $user->password = Hash::make($req->txtPassword);
+        $user->remember_token = $req->_token;
+        // $user->name = $req->txtName;
+        $user->save();
+        return view('page.register');
+    }
 }

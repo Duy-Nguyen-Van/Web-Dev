@@ -10,6 +10,6 @@ class Type_products extends Model
     protected $table = 'type_products';
 
     public function product() {
-    	return $this->hasMany('App\Products');
+        return $this->hasMany('App\Products', 'id_type', 'id');
     }
 }

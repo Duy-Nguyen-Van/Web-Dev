@@ -9,7 +9,7 @@ class Products extends Model
     //Connect to table products
     protected $table = 'products';
 
-    public function cate(){
-    	return $this->belongTo('App\Type_products');
+    public function type_products() {
+    	return $this->belongTo('App\Type_products', 'id_type', 'id');
     }
 }

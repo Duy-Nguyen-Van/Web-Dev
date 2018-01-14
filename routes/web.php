@@ -12,18 +12,19 @@
 */
 
 Route::get('index', ['as'=>'index', 'uses'=>'PageController@getIndex']);
-Route::get('products', ['as'=>'products', 'uses'=>'PageController@getProducts']);
-Route::get('single', ['as'=>'single', 'uses'=>'PageController@getSingle']);
+Route::get('products/{type}', ['as'=>'products', 'uses'=>'PageController@getProducts']);
+Route::get('single/{id}', ['as'=>'single', 'uses'=>'PageController@getSingle']);
 Route::get('checkout', ['as'=>'checkout', 'uses'=>'PageController@getCheckout']);
 Route::get('information', ['as'=>'information', 'uses'=>'PageController@getInformation']);
 Route::get('contact', ['as'=>'contact', 'uses'=>'PageController@getContact']);
 Route::get('account', ['as'=>'account', 'uses'=>'PageController@getAccount']);
 Route::get('register', ['as'=>'register', 'uses'=>'PageController@getRegister']);
+Route::post('register', ['as'=>'register', 'uses'=>'PageController@postRegister']);
 
 // Route to login admin page
-// Route::get('auth/login', ['as'=>'admin.login', 'uses'=>'LoginAdminController@getLogin']);
-// Route::post('auth/login', ['as'=>'admin.login', 'uses'=>'LoginAdminController@postLogin']);
-// Route::get('auth/logout', ['as'=>'admin.logout', 'uses'=>'LoginAdminController@getLogout']);
+Route::get('auth/login', ['as'=>'admin.login', 'uses'=>'LoginAdminController@getLogin']);
+Route::post('auth/login', ['as'=>'admin.login', 'uses'=>'LoginAdminController@postLogin']);
+Route::get('auth/logout', ['as'=>'admin.logout', 'uses'=>'LoginAdminController@getLogout']);
 
 Route::group(['prefix'=>'admin','middleware'=>'checkLoginAdmin'], function(){
     // Manage products

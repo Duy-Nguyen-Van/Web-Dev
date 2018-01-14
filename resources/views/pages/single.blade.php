@@ -2,51 +2,48 @@
 @section('content')
 <div class="container">
    <div class="products-page">
-		<div class="products">	
-		</div>
 		<div class="new-product">
+			@foreach($detail as $detail_pro)
 			<div class="col-md-5 zoom-grid">
 				<div class="flexslider">
 					<ul class="slides">
-						<li data-thumb="images/si.jpg">
-							<div class="thumb-image"> <img src="images/si.jpg" data-imagezoom="true" class="img-responsive" alt="" /> </div>
+						<li data-thumb="{{$detail_pro->image}}">
+							<div class="thumb-image"> <img src="{{$detail_pro->image}}" data-imagezoom="true" class="img-responsive" alt="" /> </div>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-md-7 dress-info">
 				<div class="dress-name">
-					<h3>BOX TEA</h3>
-					<span>150.000Đ</span>
+					<h3>{{$detail_pro->name}}</h3>
 					<div class="clearfix"></div>
 				</div>
 				<div class="span span1">
-					<p class="left">XUẤT XỨ</p>
+					<p class="left">GIÁ:</p>
+					<p class="right">{{$detail_pro->price}} VNĐ</p>
+					<div class="clearfix"></div>
+				</div>
+				<div class="span span1">
+					<p class="left">XUẤT XỨ:</p>
 					<p class="right">Việt Nam</p>
 					<div class="clearfix"></div>
 				</div>
-				<div class="span span3">
-					<p class="left">MÀU</p>
-					<p class="right">White</p>
-					<div class="clearfix"></div>
-				</div>
-				<div class="span span4">
+				<div class="span span1">
 					<p class="left">SIZE</p>
 					<p class="right"><span class="selection-box"><select class="domains valid" name="domains">
-					<option>S</option>
-					<option>M</option>
-					<option>L</option>
-					<option>XL</option>
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+						<option>XL</option>
 					</select></span></p>
 					<div class="clearfix"></div>
 				</div>
 				<div class="purchase">
-					<a href="#">ĐẶT HÀNG</a>
+					<a href="{{route('checkout')}}">ĐẶT HÀNG</a>
 					<div class="social-icons">
 						<ul>
 							<li><a class="facebook1" href="#"></a></li>
 							<li><a class="twitter1" href="#"></a></li>
-							<li><a class="googleplus1" href="#"></a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -64,7 +61,9 @@
 					});
 				</script>
 			</div>
-		</div>										
+			@endforeach
+		</div>
+		<div class="clearfix"></div>									
 	</div>
 </div>
 @endsection

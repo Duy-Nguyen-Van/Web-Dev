@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Type_products;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('header',function($view){
+            $cate = Type_products::all();
+            $view->with('cate',$cate);
+        });
     }
 
     /**
