@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `id_type`, `origin`, `description`, `price`, `promotion`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'ÁO THUN TAY DÀI CÁ KOI D167-4 (ĐÔ)', 1, NULL, NULL, 199000, 0, 'http://juky.vn/upload/products/tb29lgkis3pl1jjszfxxxcbbvxa2923754463_1512550649.jpg', NULL, '2018-01-13 17:43:21'),
+(1, 'ÁO THUN TAY DÀI CÁ KOI D167-4 (ĐÔ)', 1, NULL, NULL, 199000, 0, 'http://juky.vn/upload/products/tb29lgkis3pl1jjszfxxxcbbvxa2923754463_1513675030.jpg', NULL, '2018-01-13 17:43:21'),
 (2, 'ÁO THUN TAY DÀI MẶT HỀ D168 (ĐỎ - ĐEN)', 1, NULL, NULL, 199000, 50000, 'http://juky.vn/upload/products/photo20171207172917_1512642659.jpg', NULL, '2018-01-13 17:43:37'),
 (3, 'ÁO THUN ICON SMILE BỰ CO041-3 (XÁM)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/co0413_1512109091.jpg', NULL, NULL),
 (4, 'ÁO THUN CHỮ NHẬT IN TAY CO252-1 (TRẮNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/231307621937046493285456213738115829552594n_1509615831.png', NULL, NULL),
@@ -139,7 +139,7 @@ INSERT INTO `products` (`id`, `name`, `id_type`, `origin`, `description`, `price
 (10, 'ÁO THUN CỔ TRÒN 2 CON MÈO CO231', 1, NULL, NULL, 99000, 50000, 'http://juky.vn/upload/products/2172841419109743758926685656344337995442536n_1508999158.jpg', NULL, '2018-01-13 17:43:44'),
 (11, 'ÁO THUN CỔ TRÒN ĐẦU CON MÈO CO229-2 (HỒNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2272867619325237504043971682254327165324428n_1508989734.jpg', NULL, NULL),
 (12, 'ÁO THUN CỔ TRÒN AW3P CO228-3 (VÀNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2273013219325400904027637132884706718327387n_1508987946.jpg', NULL, NULL),
-(13, 'ÁO THUN TAY LỞ PHỐI VẠT TRẮNG CO221-2 (XÁM)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2268766519318416938059361779844560434802291n_1508827240.png', NULL, NULL),
+(13, 'ÁO THUN TAY LỞ PHỐI VẠT TRẮNG CO221-2 (XÁM)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2268766519318416938059361779844560434802291n_1513505881.jpg', NULL, NULL),
 (14, 'ÁO THUN CỔ TRÒN HYUKOH CO219-2 (ĐEN)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2268846119313533938547664896693717137916306n_1508745962.png', NULL, NULL),
 (15, 'ÁO THUN CỔ TRÒN COCACOLA CO215-3 (NÂU)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/tb2t6o5ocxjpufjsszexxaemvxa1593558082_1508578405.jpg', NULL, NULL),
 (16, 'IZRO NAME TEE - YELLOW', 1, NULL, '', 200000, 0, 'http://izro.co.kr/web/product/big/201710/117_shop1_614091.jpg', NULL, NULL),
