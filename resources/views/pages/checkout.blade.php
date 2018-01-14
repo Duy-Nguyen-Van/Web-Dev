@@ -37,13 +37,16 @@
 					<img src="{{$cart_detail->options->img}}" class="img-responsive" alt="">
 				</div>			
 				<div class="cart-item-info">
-					<h3><a href="#"> {{$cart_detail->name}} </a></h3>
+					<h3>{{$cart_detail->name}}</h3>
 					<ul class="qty">
 						<li><p>Giá: {{$cart_detail->price}} VNĐ</p></li>
-						<li><p>Số lượng</p></li><li><input class="form-control text-center" value="{{$cart_detail->qty}}" type="number"></li>
+						<li><p>Số lượng</p></li><li><input class="form-control text-center" id="qty" value="{{$cart_detail->qty}}" type="number"></li>
+						<a class="updatecart" id="{{$cart_detail->rowId}}">
+							<button>Cập nhật</button>
+						</a>
 					</ul>
 					<div class="delivery">				
-						<p>Thành tiền : {{$cart_detail->qty*$cart_detail->price}} VND</p>
+						<p>Thành tiền : {{$cart_detail->qty*$cart_detail->price}} VNĐ</p>
 						<div class="clearfix"></div>
 					</div>	
 				</div>			
@@ -65,5 +68,35 @@
  		</div>
 	</div>
 </div>
+
+<script>
+$(document).ready(function(){
+	$(".updatecart").click(function(){
+		// alert(111);
+
+		var rowid = $(this).attr('id');
+		// alert(rowid);
+		var qty = $(this).parent().parent().find("#qty").val();
+		// alert(qty);
+		var token = $("input[name='_token']").val();
+		// alert(token);
+		 
+		$.ajax({
+		 	// url:'cap-nhat/'+rowid+'/'+qty,
+		 	url:'update/'+rowid+'/'+qty,
+		 	type:'GET',
+			cache:false,
+			data:{"_token":token,"id":rowid,"qty":qty},
+			success:function (data){
+				
+		 		if(data == "oke"){
+					window.location = "checkout"
+		 		}
+		 	}
+		 });
+	});
+}); 
+
+</script>
 <!-- //checkout -->	
 @endsection
