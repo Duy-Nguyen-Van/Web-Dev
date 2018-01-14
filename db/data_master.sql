@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 14, 2018 at 09:28 AM
+-- Generation Time: Jan 14, 2018 at 02:39 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -57,14 +57,15 @@ INSERT INTO `admin` (`id`, `username`, `password`, `level`, `remember_token`, `c
 DROP TABLE IF EXISTS `bills`;
 CREATE TABLE IF NOT EXISTS `bills` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_customer` int(10) NOT NULL,
+  `id_customer` int(10) UNSIGNED NOT NULL,
   `date_order` date NOT NULL,
   `total` double NOT NULL,
-  `note` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `note` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`),
+  KEY `id_customer` (`id_customer`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -75,14 +76,16 @@ CREATE TABLE IF NOT EXISTS `bills` (
 DROP TABLE IF EXISTS `bill_detail`;
 CREATE TABLE IF NOT EXISTS `bill_detail` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `id_bill` int(10) NOT NULL,
-  `id_product` int(10) NOT NULL,
+  `id_bill` int(10) UNSIGNED NOT NULL,
+  `id_product` int(10) UNSIGNED NOT NULL,
   `quantity` int(11) NOT NULL,
   `price` double NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  PRIMARY KEY (`id`),
+  KEY `id_product` (`id_product`),
+  KEY `id_bill` (`id_bill`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -99,6 +102,26 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE IF NOT EXISTS `customer` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `gender` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `phone_number` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `note` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -128,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 INSERT INTO `products` (`id`, `name`, `id_type`, `origin`, `description`, `price`, `promotion`, `image`, `created_at`, `updated_at`) VALUES
 (1, 'ÁO THUN TAY DÀI CÁ KOI D167-4 (ĐÔ)', 1, NULL, NULL, 199000, 0, 'http://juky.vn/upload/products/tb29lgkis3pl1jjszfxxxcbbvxa2923754463_1513675030.jpg', NULL, '2018-01-13 17:43:21'),
-(2, 'ÁO THUN TAY DÀI MẶT HỀ D168 (ĐỎ - ĐEN)', 1, NULL, NULL, 199000, 50000, 'http://juky.vn/upload/products/photo20171207172917_1512642659.jpg', NULL, '2018-01-13 17:43:37'),
+(2, 'ÁO THUN TAY DÀI MẶT HỀ D168 (ĐỎ - ĐEN)', 1, NULL, NULL, 199000, 50, 'http://juky.vn/upload/products/photo20171207172917_1512642659.jpg', NULL, '2018-01-13 17:43:37'),
 (3, 'ÁO THUN ICON SMILE BỰ CO041-3 (XÁM)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/co0413_1512109091.jpg', NULL, NULL),
 (4, 'ÁO THUN CHỮ NHẬT IN TAY CO252-1 (TRẮNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/231307621937046493285456213738115829552594n_1509615831.png', NULL, NULL),
 (5, 'ÁO THUN CỔ TRÒN CON THỎ CO239-2 (XANH ĐEN)', 1, NULL, NULL, 99000, 50000, 'http://juky.vn/upload/products/2281531719340992669135127661521139221450905n_1509176601.jpg', NULL, '2018-01-13 17:44:51'),
@@ -169,6 +192,23 @@ INSERT INTO `products` (`id`, `name`, `id_type`, `origin`, `description`, `price
 (40, 'ONO SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-ono-shirt-black_master.jpg', NULL, NULL),
 (41, 'SOCA SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-soca-shirt_master.jpg', NULL, NULL),
 (42, 'WORK SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-work-shirt-blue_master.jpg', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_provider`
+--
+
+DROP TABLE IF EXISTS `social_provider`;
+CREATE TABLE IF NOT EXISTS `social_provider` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `provider_id` int(100) NOT NULL,
+  `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `provider` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -228,6 +268,19 @@ INSERT INTO `users` (`id`, `email`, `password`, `remember_token`, `name`, `gende
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `bills`
+--
+ALTER TABLE `bills`
+  ADD CONSTRAINT `bills_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `customer` (`id`);
+
+--
+-- Constraints for table `bill_detail`
+--
+ALTER TABLE `bill_detail`
+  ADD CONSTRAINT `bill_detail_ibfk_1` FOREIGN KEY (`id_bill`) REFERENCES `bills` (`id`),
+  ADD CONSTRAINT `bill_detail_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`);
 
 --
 -- Constraints for table `products`
