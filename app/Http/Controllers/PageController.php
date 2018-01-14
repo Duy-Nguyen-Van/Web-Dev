@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateUserAccountRequest;
+use App\Http\Requests\InformationRequest;
 use App\Products;
 use App\Type_products;
 use App\User;
+use App\Bills;
+use App\Bill_detail;
 use Hash;
 use Cart;
 
@@ -43,7 +46,9 @@ class PageController extends Controller
     }
 
     public function getInformation() {
-        return view('pages.information');
+        $content = Cart::content();
+        $total = Cart::subtotal();
+        return view('pages.information',compact('content','total'));
     }
 
     public function getContact() {
@@ -101,5 +106,37 @@ class PageController extends Controller
 
     public function getCartDetail() {
         return view('pages.information');
+    }
+
+    public function getUpdateCart(Request $req){
+        if($req->ajax()){
+            $id = $req->id;
+            $qty = $req->qty;
+            Cart::update($id,$qty);
+            echo "oke";
+        }
+    }
+
+    public function postPayment(Request $req){
+        $content =  Cart::content();
+        $total = Cart::subtotal();
+        $bill = new Bills;
+        $bill->id_customer = 0;
+        $bill->date_order = date('Y-m-d');
+        $bill->total = $total;
+        $bill->note = $req->notes;
+        $bill->save();
+
+        foreach($content as $key){
+            $bill_detail = new Bill_detail;
+            $bill_detail->id_bill = $bill->id;
+            $bill_detail->id_product = $key->id;
+            $bill_detail->quantity = $key->qty;
+            $bill_detail->price = $key->price;
+            $bill_detail->save();
+        }
+        // Session::forget('cart');
+        Cart::destroy();
+        return redirect()->back()->with('thongbao','Đặt hàng thành công');
     }
 }

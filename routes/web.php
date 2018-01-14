@@ -10,19 +10,53 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Route to index page
 Route::get('index', ['as'=>'index', 'uses'=>'PageController@getIndex']);
+
+// Route to product page
 Route::get('products/{type}', ['as'=>'products', 'uses'=>'PageController@getProducts']);
+
+// Route to single page
 Route::get('single/{id}', ['as'=>'single', 'uses'=>'PageController@getSingle']);
+
+// Route to checkout page
 Route::get('checkout', ['as'=>'checkout', 'uses'=>'PageController@getCheckout']);
+
+//Route to put order information into database
+Route::post('payment',['as'=>'payment','uses'=>'PageController@postPayment']);
+
+// Route to add product to checkout page
 Route::get('add-to-cart/{id}', ['as'=>'add-to-cart', 'uses'=>'PageController@getAddProductToCart']);
+
+// Route to empty all product in checkout page
 Route::get('deleteAll', ['as'=>'deleteAll', 'uses'=>'PageController@getDeleteAll']);
+
+// Route to delete each product in checkout page
 Route::get('delete/{id}', ['as'=>'delete', 'uses'=>'PageController@getDeleteCart']);
+
+//// Route to update price when increase or decrease qty
+Route::get('update/{id}/{qty}', ['as'=>'update', 'uses'=>'PageController@getUpdateCart']);
+
+// Route to information page
 Route::get('information', ['as'=>'information', 'uses'=>'PageController@getInformation']);
+
+// Route to contact page
 Route::get('contact', ['as'=>'contact', 'uses'=>'PageController@getContact']);
+
+// Route to account page
 Route::get('account', ['as'=>'account', 'uses'=>'PageController@getAccount']);
+
+// Route to register page
 Route::get('register', ['as'=>'register', 'uses'=>'PageController@getRegister']);
+
+// Route to put register information to database
 Route::post('register', ['as'=>'register', 'uses'=>'PageController@postRegister']);
+
+// Route to login with facebook or google
+Route::get('login/{provider}', ['as'=>'provider_login', 'uses'=>'PageController@redirectToProvider']);
+
+// Route to login with facebook or google
+Route::get('login/{provider}/callback', ['as'=>'provider_login_callback', 'uses'=>'PageController@handleProviderCallback']);
 
 // Route to login admin page
 Route::get('auth/login', ['as'=>'admin.login', 'uses'=>'LoginAdminController@getLogin']);

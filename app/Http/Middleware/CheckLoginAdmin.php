@@ -16,6 +16,7 @@ class CheckLoginAdmin
      */
     public function handle($request, Closure $next)
     {
+        //Check login when put admin in URL
         if (!Auth::check()) {
             return redirect()->route('admin.login');
         }
