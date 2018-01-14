@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 14, 2018 at 03:45 PM
+-- Generation Time: Jan 14, 2018 at 05:46 PM
 -- Server version: 5.7.19
 -- PHP Version: 7.1.9
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'admin', '$2y$10$CrzA78aZECMPdhq5p3xwYegSYYBwo4Z.6/S8SOmgBvofpUH41zvc2', 1, 'y6U05SGxnJLI7RwE7ExX0Ehgby4CPmvikKPLDsebuPX0H8NcsfxdwNyHBd3k', '2018-01-14 02:53:02', '2018-01-14 02:53:02'),
+(2, 'admin', '$2y$10$CrzA78aZECMPdhq5p3xwYegSYYBwo4Z.6/S8SOmgBvofpUH41zvc2', 1, 'cmSuKxR6nnPRsauGCRCF71B4ggqlhtPGHAPkg6bkl6UYyuwTIVAQMa7QqTs7', '2018-01-14 02:53:02', '2018-01-14 02:53:02'),
 (3, 'tri', '$2y$10$2MhQ8vdyOOkGZqS.WOnqmOcEZ4DOdvbR3oG5DjSFJp3vGRCF4Eypq', 2, NULL, '2018-01-14 02:55:44', '2018-01-14 02:55:44');
 
 -- --------------------------------------------------------
@@ -61,18 +61,20 @@ CREATE TABLE IF NOT EXISTS `bills` (
   `date_order` date NOT NULL,
   `total` double NOT NULL,
   `note` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `checkout` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `bills`
 --
 
-INSERT INTO `bills` (`id`, `id_customer`, `date_order`, `total`, `note`, `created_at`, `updated_at`) VALUES
-(3, 0, '2018-01-14', 50, NULL, '2018-01-14 15:27:14', '2018-01-14 15:27:14'),
-(4, 0, '2018-01-14', 450, NULL, '2018-01-14 15:27:49', '2018-01-14 15:27:49');
+INSERT INTO `bills` (`id`, `id_customer`, `date_order`, `total`, `note`, `checkout`, `created_at`, `updated_at`) VALUES
+(3, 6, '2018-01-14', 50, NULL, 0, '2018-01-14 15:27:14', '2018-01-14 15:27:14'),
+(4, 6, '2018-01-14', 450, NULL, 0, '2018-01-14 15:27:49', '2018-01-14 15:27:49'),
+(5, 6, '2018-01-14', 599, NULL, 0, '2018-01-14 16:24:03', '2018-01-14 16:24:03');
 
 -- --------------------------------------------------------
 
@@ -92,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `bill_detail` (
   PRIMARY KEY (`id`),
   KEY `id_product` (`id_product`),
   KEY `id_bill` (`id_bill`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `bill_detail`
@@ -100,7 +102,10 @@ CREATE TABLE IF NOT EXISTS `bill_detail` (
 
 INSERT INTO `bill_detail` (`id`, `id_bill`, `id_product`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
 (2, 3, 2, 1, 50, '2018-01-14 15:27:14', '2018-01-14 15:27:14'),
-(3, 4, 41, 1, 450, '2018-01-14 15:27:49', '2018-01-14 15:27:49');
+(3, 4, 41, 1, 450, '2018-01-14 15:27:49', '2018-01-14 15:27:49'),
+(4, 5, 5, 1, 50, '2018-01-14 16:24:03', '2018-01-14 16:24:03'),
+(5, 5, 6, 1, 99, '2018-01-14 16:24:03', '2018-01-14 16:24:03'),
+(6, 5, 42, 1, 450, '2018-01-14 16:24:03', '2018-01-14 16:24:03');
 
 -- --------------------------------------------------------
 
@@ -136,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `customer`
@@ -147,7 +152,8 @@ INSERT INTO `customer` (`id`, `name`, `gender`, `email`, `address`, `phone_numbe
 (2, 'abc', NULL, '1@gmail.com', '1', '1', '1', '2018-01-14 15:23:45', '2018-01-14 15:23:45'),
 (3, 'a', NULL, '123@gmail.com', '1', '1', '1', '2018-01-14 15:24:14', '2018-01-14 15:24:14'),
 (4, 'a', NULL, '123@gmail.com', '1', '1', '1', '2018-01-14 15:27:14', '2018-01-14 15:27:14'),
-(5, 'dfadfasfadf', NULL, 'afds@gmail.com', '13e1r', '12124134', '12', '2018-01-14 15:27:49', '2018-01-14 15:27:49');
+(5, 'dfadfasfadf', NULL, 'afds@gmail.com', '13e1r', '12124134', '12', '2018-01-14 15:27:49', '2018-01-14 15:27:49'),
+(6, 'trí', NULL, 'hominht@gmail.com', 'dytie', '09912', '0', '2018-01-14 16:24:03', '2018-01-14 16:24:03');
 
 -- --------------------------------------------------------
 
