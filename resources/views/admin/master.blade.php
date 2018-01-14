@@ -121,7 +121,10 @@
                             <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Bill<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="">List Bill</a>
+                                    <a href="">Show Bill</a>
+                                </li>
+                                <li>
+                                    <a href="#">Show Detail</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

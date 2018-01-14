@@ -133,7 +133,7 @@ class PageController extends Controller
 
 
         $bill = new Bills;
-        $bill->id_customer = 0;
+        $bill->id_customer = $customer->id;
         $bill->date_order = date('Y-m-d');
         $bill->total = $total;
         $bill->note = $req->notes;

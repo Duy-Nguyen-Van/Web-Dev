@@ -91,6 +91,13 @@ Route::group(['prefix'=>'admin','middleware'=>'checkLoginAdmin'], function(){
         Route::post('add', ['as'=>'admin.user.postAdd', 'uses'=>'UserController@postAdd']);     
     });
 
+    // Manage bills
+    Route::group(['prefix'=>'bill'], function(){
+        Route::get('showBill', ['as'=>'admin.bill.showBill', 'uses'=>'BillController@getBill']);
+        Route::post('postCheck/{id}', ['as'=>'admin.bill.postCheck', 'uses'=>'BillController@postCheck']);	
+        Route::get('showDetail/{id}', ['as'=>'admin.bill.showDetail', 'uses'=>'BillController@getBillDetail']);    
+    });
+
     // Manage admin account
     Route::group(['prefix'=>'userAdmin'], function(){
         Route::get('list', ['as'=>'admin.userAdmin.list', 'uses'=>'AdminController@getList']);
