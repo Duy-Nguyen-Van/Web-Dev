@@ -39,7 +39,7 @@
 					<div class="clearfix"></div>
 				</div>
 				<div class="purchase">
-					<a href="{{route('checkout')}}">ĐẶT HÀNG</a>
+					<a href="{{route('add-to-cart',$detail_pro->id)}}">ĐẶT HÀNG</a>
 					<div class="social-icons">
 						<ul>
 							<li><a class="facebook1" href="#"></a></li>
