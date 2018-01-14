@@ -250,3 +250,16 @@ h5.color-black{
     width: 40%;
     /*text-align: left;*/
 }
+.facebook
+{
+    padding-right: 0px;
+    padding-left: 70px;
+}
+.google
+{
+    padding-left: 0px;
+}
+.social
+{
+    padding-top: 30px;
+}
