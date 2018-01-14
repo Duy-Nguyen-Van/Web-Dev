@@ -67,3 +67,9 @@ Route::group(['prefix'=>'admin','middleware'=>'checkLoginAdmin'], function(){
         Route::post('edit/{id}', ['as'=>'admin.userAdmin.postEdit', 'uses'=>'AdminController@postEdit']); 
     });
 });
+//Login with Google
+Route::get('auth/google',['as' =>'auth/google','uses' =>'Auth\LoginController@redirectToGoogle']);
+Route::get('auth/google/callback', ['as' => 'auth/google/callback','uses' => 'Auth\LoginController@handleGoogleCallback']);
+//Login with Facebook
+Route::get('/redirect/{social}', 'SocialAuthController@redirect');
+Route::get('/callback/{social}', 'SocialAuthController@callback');
