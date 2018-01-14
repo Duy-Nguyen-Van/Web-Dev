@@ -12,7 +12,7 @@
 				<li class="women">LIÊN HỆ</li>
 			</ul>
 			<ul class="previous">
-				<li><a href="index.html">Trở về trang vừa truy cập</a></li>
+				<li><a href="{{redirect()->getUrlGenerator()->previous()}}">QUAY LẠI</a></li>
 			</ul>
 			<div class="clearfix"></div>
 		</div>
