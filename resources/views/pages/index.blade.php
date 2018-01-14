@@ -86,7 +86,7 @@
 						<a href="{{route('single', $lastestItem->id)}}">Quick View</a>
 					</div>
 					<a class="product_name" href="{{route('single', $lastestItem->id)}}">{{$lastestItem->name}}</a>
-					<p><a class="item_add" href="{{route('add-to-cart', $lastestItem->id)}}"><i></i> <span class="item_price">{{$lastestItem->price}} VNĐ</span></a></p>
+					<p><a class="item_add" href="{{route('add-to-cart', $lastestItem->id)}}"><i></i> <span class="item_price">{{number_format($lastestItem->price,3)}} VNĐ</span></a></p>
 				</div>
 			@endforeach
 			<div class="clearfix"></div>
@@ -102,7 +102,7 @@
 			<li><a href="{{route('single', $saleItem->id)}}"><img src="{{$saleItem->image}}" class="img-responsive" alt="" /></a>
 				<div class="product liked-product simpleCart_shelfItem">
 					<a class="like_name" href="{{route('single', $saleItem->id)}}">{{$saleItem->name}}</a>
-					<p><a class="item_add" href="{{route('add-to-cart', $saleItem->id)}}"><i></i> <span class=" item_price">{{$saleItem->promotion}} VNĐ</span></a></p>
+					<p><a class="item_add" href="{{route('add-to-cart', $saleItem->id)}}"><i></i> <span class=" item_price">{{number_format($saleItem->promotion,3)}} VNĐ</span></a></p>
 				</div>
 			</li>
 		@endforeach

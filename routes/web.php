@@ -101,3 +101,6 @@ Route::group(['prefix'=>'admin','middleware'=>'checkLoginAdmin'], function(){
         Route::post('edit/{id}', ['as'=>'admin.userAdmin.postEdit', 'uses'=>'AdminController@postEdit']); 
     });
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

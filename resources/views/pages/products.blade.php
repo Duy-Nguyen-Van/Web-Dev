@@ -43,10 +43,10 @@
 											</div>
 											<div class="pricey"><span class="item_price">
 												@if($item->promotion == 0)
-													{{$item->price}} VNĐ
+													{{number_format($item->price,3)}} VNĐ
 												@else
-													<div><del>{{$item->price}}</del> 
-														<span>{{$item->promotion}}</span> VNĐ
+													<div><del>{{number_format($item->price,3)}}</del> 
+														<span>{{number_format($item->promotion,3)}}</span> VNĐ
 													</div>		
 												@endif
 											</span></div>
@@ -84,7 +84,7 @@
 		<li><a href="{{route('single', $saleItem->id)}}"><img src="{{$saleItem->image}}" class="img-responsive" alt="" /></a>
 			<div class="product liked-product simpleCart_shelfItem">
 				<a class="like_name" href="{{route('single', $saleItem->id)}}">{{$saleItem->name}}</a>
-				<p><a class="item_add" href="#"><i></i> <span class=" item_price">{{$saleItem->promotion}}</span></a></p>
+				<p><a class="item_add" href="#"><i></i> <span class=" item_price">{{number_format($saleItem->promotion,3)}}</span></a></p>
 			</div>
 		</li>
 	@endforeach

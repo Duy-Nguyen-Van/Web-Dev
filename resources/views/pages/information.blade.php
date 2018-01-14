@@ -72,7 +72,7 @@
 														<p class="font-large">{{$cart_detail->name}}</p>
 														<!-- <span class="color-gray your-order-info">Size: M</span><br> -->
 														<span class="color-gray your-order-info">Qty: {{$cart_detail->qty}}</span><br>
-														<span class="color-gray your-order-info">Price: {{$cart_detail->qty*$cart_detail->price}} VNĐ</span><br>
+														<span class="color-gray your-order-info">Price: {{number_format($cart_detail->qty*$cart_detail->price,3)}} VNĐ</span><br>
 													</div>
 												</div>
 												<!-- end one item -->
@@ -83,7 +83,7 @@
 									</div>
 									<div class="your-order-head"><h5><b>Hình thức thanh toán</b></h5></div>
 									<div class="your-order-body">
-										<div class="pull-left"><p class="your-order-f18">Tổng tiền: {{$total}}</p></div>
+										<div class="pull-left"><p class="your-order-f18">Tổng tiền: {{number_format($total,3)}} VNĐ</p></div>
 										<div class="clearfix"></div>
 									</div>
 					

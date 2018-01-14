@@ -20,7 +20,7 @@
 				</div>
 				<div class="span span1">
 					<p class="left">GIÁ:</p>
-					<p class="right">{{$detail_pro->price}} VNĐ</p>
+					<p class="right">{{number_format($detail_pro->price,3)}} VNĐ</p>
 					<div class="clearfix"></div>
 				</div>
 				<div class="span span1">
@@ -28,7 +28,7 @@
 					<p class="right">Việt Nam</p>
 					<div class="clearfix"></div>
 				</div>
-				<div class="span span1">
+				<!-- <div class="span span1">
 					<p class="left">SIZE</p>
 					<p class="right"><span class="selection-box"><select class="domains valid" name="domains">
 						<option>S</option>
@@ -37,7 +37,7 @@
 						<option>XL</option>
 					</select></span></p>
 					<div class="clearfix"></div>
-				</div>
+				</div> -->
 				<div class="purchase">
 					<a href="{{route('add-to-cart',$detail_pro->id)}}">ĐẶT HÀNG</a>
 					<div class="social-icons">
