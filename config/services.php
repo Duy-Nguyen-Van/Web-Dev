@@ -34,20 +34,17 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-<<<<<<< HEAD
 
-    'facebook' => [
-        'client_id'     => '394355544350498',
-        'client_secret' => '24b3604c6ba9becca366c5a589a649ff',
-        'redirect'      => 'http://localhost:8888/auth/facebook/callback',
-    ],
 
-    'google' => [
-        'client_id'     => '701412635034-qghmpbu9hko6b6g9nro7la854u1bdn82.apps.googleusercontent.com',
-        'client_secret' => '4rXqUV6gWkXbcOp-9U7iQTIT',
-        'redirect'      => 'https://localhost:8888/auth/google/callback',
-    ],
+    // 'facebook' => [
+    //     'client_id'     => '394355544350498',
+    //     'client_secret' => '24b3604c6ba9becca366c5a589a649ff',
+    //     'redirect'      => 'http://localhost:8888/auth/facebook/callback',
+    // ],
 
-=======
->>>>>>> 8ac5d59d5a92241ee9840c48c75eb4e57e3861ec
+    // 'google' => [
+    //     'client_id'     => '701412635034-qghmpbu9hko6b6g9nro7la854u1bdn82.apps.googleusercontent.com',
+    //     'client_secret' => '4rXqUV6gWkXbcOp-9U7iQTIT',
+    //     'redirect'      => 'https://localhost:8888/auth/google/callback',
+    // ],
 ];
