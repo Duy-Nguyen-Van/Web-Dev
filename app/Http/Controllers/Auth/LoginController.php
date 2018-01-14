@@ -86,12 +86,12 @@ class LoginController extends Controller
 //Facebook
     public function redirectToFacebook()
     {
-        return Socialite::driver('')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
     public function handleFacebookCallback()
     {
         try {
-            $user = Socialite::driver('google')->stateless()->user();
+            $user = Socialite::driver('facebook')->stateless()->user();
             
             // $userModel = new User;
             // $createdUser = $userModel->addNew($user);
@@ -99,28 +99,13 @@ class LoginController extends Controller
             // return redirect()->route('home');
         } 
         catch (Exception $e) {
-            return redirect('auth/google');
+            return redirect('auth/facebook');
         }
-        //dd($user)
-        $authUser = $this->createUser($user);
-        Auth::login($authUser, true);
-        return redirect()->route('index');
+        dd($user);
+        // $authUser = $this->createUser($user);
+        // Auth::login($authUser, true);
+        // return redirect()->route('index');
     }
 
-    public function createUser($user)
-    {
-        $authUser = User::where('google_id' , $user->id)->first();
-        //dd($authUser)
-        if($authUser)
-        {
-            return $authUser;
-        }
-
-        return User::create
-        ([
-            'name' => $user->name,
-            'google_id' => $user->id,
-            'email' => $user->email,
-        ]);
-    }
+    
 }

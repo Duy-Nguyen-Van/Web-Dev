@@ -105,5 +105,5 @@ Route::group(['prefix'=>'admin','middleware'=>'checkLoginAdmin'], function(){
 Route::get('auth/google',['as' =>'auth/google','uses' =>'Auth\LoginController@redirectToGoogle']);
 Route::get('auth/google/callback', ['as' => 'auth/google/callback','uses' => 'Auth\LoginController@handleGoogleCallback']);
 //Login with Facebook
-Route::get('/redirect/{social}', 'SocialAuthController@redirect');
-Route::get('/callback/{social}', 'SocialAuthController@callback');
+Route::get('auth/facebook',['as' =>'auth/facebook','uses' =>'Auth\LoginController@redirectToFacebook']);
+Route::get('auth/facebook/callback', ['as' => 'auth/facebook/callback','uses' => 'Auth\LoginController@handleFacebookCallback']);
