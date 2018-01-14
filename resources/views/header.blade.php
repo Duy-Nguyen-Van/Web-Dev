@@ -9,13 +9,20 @@
 				</ul>
 			</div>
 			<div class="header-right">
-					<div class="cart box_1">
-						<a href="{{route('checkout')}}">
-							<h3> <span class="simpleCart_total">0.00 VNĐ</span> (<span id="simpleCart_quantity" class="simpleCart_quantity"> 0 </span>)<img src="source/images/bag.png" alt=""></h3>
-						</a>	
-						<p><a href="javascript:;" class="simpleCart_empty">Làm rỗng</a></p>
-						<div class="clearfix"> </div>
-					</div>
+				<div class="cart box_1">
+					<a href="{{route('checkout')}}">
+						<h3>{{$total}} VNĐ - 
+							@if($count == 0)
+								Giỏ trống
+							@else
+								{{$count}} SP
+							@endif
+							<img src="source/images/bag.png" alt="">
+						</h3>
+					</a>	
+					<p><a href="{{route('deleteAll')}}" class="simpleCart_empty">Làm rỗng</a></p>
+					<div class="clearfix"> </div>
+				</div>
 			</div>
 			<div class="clearfix"> </div>
 		</div>

@@ -6,38 +6,23 @@
 		<div class="new-product">
 			<div class="new-product-top">
 				<ul class="product-top-list">
-					<li><a href="{{route('index')}}">Trang chủ</a>&nbsp;<span>&gt;</span></li>
-					<li><span class="act">Sản phẩm</span>&nbsp;</li>
+					<li><a href="{{route('index')}}">TRANG CHỦ</a>&nbsp;<span>&gt;</span></li>
+					<li><span class="act">SẢN PHẨM</span>&nbsp;</li>
 				</ul>
-				<p class="back"><a href="#">Trở về trang vừa truy cập</a></p>
+				<p class="back"><a href="{{redirect()->getUrlGenerator()->previous()}}">QUAY LẠI</a></p>
 				<div class="clearfix"></div>
 			</div>
 			<div class="mens-toolbar">
 				<div class="sort">
 					<div class="sort-by">
-						<label>Sort By</label>
+						<label>SẮP XẾP</label>
 						<select>
-							<option value="">Position</option>
-							<option value="">Name</option>
-							<option value="">Price</option>
+							<option value="">Theo Tên</option>
+							<option value="">Theo Giá</option>
 						</select>
-						<a href=""><img src="images/arrow2.gif" alt="" class="v-middle"></a>
 					</div>
 				</div>
 				<div class="clearfix"></div>		
-			</div>
-			<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
-				<div class="pages">   
-					<div class="limiter visible-desktop">
-						<label>Show</label>
-						<select>
-							<option value="" selected="selected">9</option>
-							<option value="">15</option>
-							<option value="">30</option>
-						</select> per page        
-					</div>
-				</div>
-				<div class="clearfix"></div>
 			</div>
 			<div id="cbp-vm" class="cbp-vm-switcher cbp-vm-view-grid">
 				<ul>
@@ -56,7 +41,15 @@
 											<div class="cart-left">
 												<p class="title">{{$item->name}}</p>
 											</div>
-											<div class="pricey"><span class="item_price">{{$item->price}} VNĐ</span></div>
+											<div class="pricey"><span class="item_price">
+												@if($item->promotion == 0)
+													{{$item->price}} VNĐ
+												@else
+													<div><del>{{$item->price}}</del> 
+														<span>{{$item->promotion}}</span> VNĐ
+													</div>		
+												@endif
+											</span></div>
 											<div class="clearfix"></div>
 										</div>		
 									</div>
@@ -66,7 +59,7 @@
 						<!-- <div class="cbp-vm-details">
 							Silver beet shallot wakame tomatillo salsify mung bean beetroot groundnut.
 						</div> -->
-						<a class="cbp-vm-icon cbp-vm-add item_add" href="{{route('checkout')}}">Thêm vào giỏ hàng</a>
+						<a class="cbp-vm-icon cbp-vm-add item_add" href="{{route('add-to-cart', $item->id)}}">Thêm vào giỏ hàng</a>
 					</li>
 					@endforeach
 				</ul>

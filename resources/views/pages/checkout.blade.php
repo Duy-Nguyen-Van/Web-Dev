@@ -15,7 +15,7 @@
 				</li>
 			</ul>
 			<ul class="previous">
-				<li><a href="{{route('index')}}">QUAY LẠI</a></li>
+				<li><a href="{{redirect()->getUrlGenerator()->previous()}}">QUAY LẠI</a></li>
 			</ul>
 			<div class="clearfix"></div>
 		</div>
@@ -29,40 +29,41 @@
 				});	  
 			});
 		</script>
+		@foreach($content as $cart_detail)
 		<div class="cart-header">
-			<div class="close1"> </div>
+		<a href="{{route('delete',['id'=>$cart_detail->rowId])}}"><div class="close1"></div></a>
 			<div class="cart-sec simpleCart_shelfItem">
 				<div class="cart-item cyc">
-					<img src="images/l1.jpg" class="img-responsive" alt="">
-				</div>
+					<img src="{{$cart_detail->options->img}}" class="img-responsive" alt="">
+				</div>			
 				<div class="cart-item-info">
-					<h3><a href="#"> Box Tee </a></h3>
+					<h3><a href="#"> {{$cart_detail->name}} </a></h3>
 					<ul class="qty">
-						<li><p>Giá: 150.000đ</p></li>
-						<li><p>Số lượng</p></li><li><input class="form-control text-center" value="1" type="number"></li>
+						<li><p>Giá: {{$cart_detail->price}} VNĐ</p></li>
+						<li><p>Số lượng</p></li><li><input class="form-control text-center" value="{{$cart_detail->qty}}" type="number"></li>
 					</ul>
-					<div class="delivery">
-						<p>Thành tiền : $10.00</p>
-						<div class="clea	rfix"></div>
+					<div class="delivery">				
+						<p>Thành tiền : {{$cart_detail->qty*$cart_detail->price}} VND</p>
+						<div class="clearfix"></div>
 					</div>	
-				</div>
+				</div>			
 				<div class="clearfix"></div>
-			</div>
+			</div>		
 		</div>
+		@endforeach
+		<hr>
+		<div class="delivery" style="margin-left: 24%">				
+			<p>Tổng tiền : {{$total}} VND</p>
+			<div class="clearfix"></div>
+		</div>	
+		<div class="clearfix"></div>
+		<div class="col-md-3 col-md-offset-3" style="margin-top: 20px;">
+			<a href="{{route('index')}}" class="btn btn-warning">Tiếp tục mua hàng</a>
+		</div>
+ 		<div class="col-md-3 col-md-offset-3" style="margin-top: 20px;">
+			<a href="{{route('information')}}" class="btn btn-success">Đặt hàng</a>
+ 		</div>
 	</div>
 </div>
-<!-- 		<a href="products.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
-		<a href="#" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
- -->
-		<div class="col-md-3 col-md-offset-3">
-			<a href="#" class="btn btn-warning">Tiếp tục mua hàng</a>
-		</div>
- 		<div class="col-md-3 col-md-offset-3">
- 			<a href="{{route('information')}}" class="btn btn-success">Đặt hàng</a>
- 		</div>
-</div>
-</div>
-	<br>
-
 <!-- //checkout -->	
 @endsection

@@ -22,11 +22,14 @@
 				<div class="reg">
 					<h2>ĐĂNG KÍ</h2>
 					<form method="POST">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-						<!-- <ul>
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">				
+						<div class="col-lg-12">
+						@include('admin.blocks.error')
+                    	</div>
+						<ul>
 							<li class="text-info">Họ và tên </li>
 							<li><input type="text" name="txtName" value="" placeholder="Vui lòng nhập họ và tên"></li>
-						</ul>			  -->
+						</ul>
 						<ul>
 							<li class="text-info">Email: </li>
 							<li><input type="text" name="txtEmail" value="" placeholder="Vui lòng nhập email"></li>
@@ -42,6 +45,11 @@
 						<p class="click">*Tôi đã đọc và đồng ý với <a href="#">chính sách </a> của M &amp; A Shop</p>
 						<br> 			
 						<input type="submit" value="ĐĂNG KÝ">
+						@if(Session::has('flash_message'))
+                             <div class="alert alert-{{Session::get('flash_level')}}">
+                                 {{ Session::get('flash_message')}}
+                            </div>
+						@endif
 					</form>
 				</div>
 			</div>

@@ -24,10 +24,10 @@ class CreateUserAccountRequest extends FormRequest
     public function rules()
     {
         return [
-            'txtName'=>'required|unique: users, name',
-            'txtEmail'=>'required|unique: users, email',
+            'txtName'=>'required',
+            'txtEmail'=>'required|email|unique:users,email',
             'txtPassword'=>'required',
-            'txtRePassword'=>'required|same: txtPassword'
+            'txtRePassword'=>'required|same:txtPassword'
         ];
     }
 }

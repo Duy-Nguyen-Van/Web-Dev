@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 13, 2018 at 03:51 PM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 5.6.31
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jan 14, 2018 at 09:28 AM
+-- Server version: 5.7.19
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,24 +28,25 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `level` tinyint(1) NOT NULL,
   `remember_token` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf32 COLLATE=utf32_unicode_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `level`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'SuperAdmin', '$2y$10$inET1p7.GEg41nLgIF19POkGQNVI4nPgr3niDAsGcSXWhe7tI7OkW', 0, 'YK7632GHXlIBk8zaInlhbggNMwkCmJQD4zq4NwRHLkOl0ih4SB9lo5GiOLuL', '2018-01-13 03:35:34', '2018-01-11 10:30:34'),
-(2, 'Admin', '$2y$10$J2HU1HEz.17bAtg/r0AISe3qqTEP0UbLsc4skDFfMYwm3Ez6HnaSK', 1, 'Q4Lei9Y93dyEJal06NulFbuc2NuFrwQuWy2faYQhHXab6vKrOJg5ggsyd9FG', '2018-01-12 08:34:41', '2018-01-12 01:22:22'),
-(8, 'admin 3', '$2y$10$eMUf0V0t8/67vtkw7pZt5.2Wv7bT0/pMYqJ4FA8Gex/niXj9nWEVm', 1, NULL, '2018-01-12 01:33:56', '2018-01-12 01:33:56');
+(2, 'admin', '$2y$10$CrzA78aZECMPdhq5p3xwYegSYYBwo4Z.6/S8SOmgBvofpUH41zvc2', 1, 'y6U05SGxnJLI7RwE7ExX0Ehgby4CPmvikKPLDsebuPX0H8NcsfxdwNyHBd3k', '2018-01-14 02:53:02', '2018-01-14 02:53:02'),
+(3, 'tri', '$2y$10$2MhQ8vdyOOkGZqS.WOnqmOcEZ4DOdvbR3oG5DjSFJp3vGRCF4Eypq', 2, NULL, '2018-01-14 02:55:44', '2018-01-14 02:55:44');
 
 -- --------------------------------------------------------
 
@@ -53,14 +54,16 @@ INSERT INTO `admin` (`id`, `username`, `password`, `level`, `remember_token`, `c
 -- Table structure for table `bills`
 --
 
-CREATE TABLE `bills` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `bills`;
+CREATE TABLE IF NOT EXISTS `bills` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_customer` int(10) NOT NULL,
   `date_order` date NOT NULL,
   `total` double NOT NULL,
-  `note` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `note` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -69,14 +72,16 @@ CREATE TABLE `bills` (
 -- Table structure for table `bill_detail`
 --
 
-CREATE TABLE `bill_detail` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `bill_detail`;
+CREATE TABLE IF NOT EXISTS `bill_detail` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_bill` int(10) NOT NULL,
   `id_product` int(10) NOT NULL,
   `quantity` int(11) NOT NULL,
   `price` double NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -85,11 +90,12 @@ CREATE TABLE `bill_detail` (
 -- Table structure for table `contact`
 --
 
-CREATE TABLE `contact` (
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE IF NOT EXISTS `contact` (
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `address` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `phone_number` tinyint(4) NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -100,33 +106,69 @@ CREATE TABLE `contact` (
 -- Table structure for table `products`
 --
 
-CREATE TABLE `products` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_type` int(10) NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `id_type` int(10) UNSIGNED NOT NULL,
+  `origin` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   `price` double NOT NULL,
   `promotion` double NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_type` (`id_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `id_type`, `description`, `price`, `promotion`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Áo sơ mi trắng', 6, '&Aacute;o sơ mi trắng', 500, 380, 'quan-kaki-han-quoc-trang-xam-qk148-6549-slide-1.jpg', NULL, '2018-01-12 02:24:15'),
-(2, 'Áo sơ mi xanh', 6, 'Sơ mi chất liệu tho&aacute;ng m&aacute;t</p>', 260, 200, '3-ao-thun-nam-co-co-tay-vien-den-r.jpg', NULL, '2018-01-12 02:14:06'),
-(30, 'Áo thun update', 7, '<p>&Aacute;o thun</p>', 122, 95, '131_Ao_thun_nam_tay_dai_phoi_vien_mau_trang_a7403.jpg', '2018-01-10 20:39:55', '2018-01-12 02:34:49'),
-(31, 'Quần dài', 8, 'a', 20, 12, 'c6c380c2-e90e-0a00-191f-00142b9f72fd.jpg', '2018-01-10 21:13:42', '2018-01-12 02:34:33'),
-(32, 'Quần kaki trắng', 8, '1', 12, 0, 'quan-kaki-03.jpg', '2018-01-12 02:00:03', '2018-01-12 02:15:15'),
-(33, 'Áo sơ mi xanh nhạt', 6, '<p>Chất liệu tho&aacute;ng m&aacute;t</p>', 100, 50, 'images.jpg', '2018-01-12 02:38:12', '2018-01-12 02:38:12'),
-(34, 'Áo sơ mi đen', 6, 'Chất liệu tho&aacute;ng m&aacute;t', 50, 0, 'ao-so-mi-nam-body-titishopvn-sm304-den-1464251589-1528022-e7677d3caf240d57e20c7d0c91473d50.jpg', '2018-01-12 06:35:53', '2018-01-12 06:35:53'),
-(35, 'Áo sơ mi ca-rô', 6, 'Sơ mi caro', 48, 0, 'ao_so_mi_caro_03.jpg', '2018-01-12 06:39:01', '2018-01-12 06:39:01'),
-(36, 'Sơ mi xám', 6, 'Sơ mi trắng', 60, 0, 'chon-ao-so-mi-nam-cho-nguoi-map-2.jpg', '2018-01-12 06:39:52', '2018-01-12 06:39:52'),
-(37, 'Sơ mi tay dài', 6, 'Tay d&agrave;i', 80, 0, 'taydai.jpg', '2018-01-12 06:40:57', '2018-01-12 06:40:57');
+INSERT INTO `products` (`id`, `name`, `id_type`, `origin`, `description`, `price`, `promotion`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'ÁO THUN TAY DÀI CÁ KOI D167-4 (ĐÔ)', 1, NULL, NULL, 199000, 0, 'http://juky.vn/upload/products/tb29lgkis3pl1jjszfxxxcbbvxa2923754463_1512550649.jpg', NULL, '2018-01-13 17:43:21'),
+(2, 'ÁO THUN TAY DÀI MẶT HỀ D168 (ĐỎ - ĐEN)', 1, NULL, NULL, 199000, 50000, 'http://juky.vn/upload/products/photo20171207172917_1512642659.jpg', NULL, '2018-01-13 17:43:37'),
+(3, 'ÁO THUN ICON SMILE BỰ CO041-3 (XÁM)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/co0413_1512109091.jpg', NULL, NULL),
+(4, 'ÁO THUN CHỮ NHẬT IN TAY CO252-1 (TRẮNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/231307621937046493285456213738115829552594n_1509615831.png', NULL, NULL),
+(5, 'ÁO THUN CỔ TRÒN CON THỎ CO239-2 (XANH ĐEN)', 1, NULL, NULL, 99000, 50000, 'http://juky.vn/upload/products/2281531719340992669135127661521139221450905n_1509176601.jpg', NULL, '2018-01-13 17:44:51'),
+(6, 'ÁO THUN CỔ TRÒN RAPLAN TRƠN CO237-4 (XANH ĐEN)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2273007119334487703118958236213838661309461n_1509161449.png', NULL, NULL),
+(7, 'ÁO THUN CỔ TRÒN BROOKLYA CO236-4 (ĐỎ)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2273027319330031270231266943515377350168389n_1509010716.png', NULL, NULL),
+(8, 'ÁO THUN CỔ TRÒN EISTU CO233-1 (TRẮNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/6d8c03a4d81b34456d0a_1511767717.jpg', NULL, NULL),
+(9, 'ÁO THUN CỔ TRÒN MÚA VÕ CO232-2 (NÂU)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2273049019329581636942899038846225144991199n_1509001237.jpg', NULL, NULL),
+(10, 'ÁO THUN CỔ TRÒN 2 CON MÈO CO231', 1, NULL, NULL, 99000, 50000, 'http://juky.vn/upload/products/2172841419109743758926685656344337995442536n_1508999158.jpg', NULL, '2018-01-13 17:43:44'),
+(11, 'ÁO THUN CỔ TRÒN ĐẦU CON MÈO CO229-2 (HỒNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2272867619325237504043971682254327165324428n_1508989734.jpg', NULL, NULL),
+(12, 'ÁO THUN CỔ TRÒN AW3P CO228-3 (VÀNG)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2273013219325400904027637132884706718327387n_1508987946.jpg', NULL, NULL),
+(13, 'ÁO THUN TAY LỞ PHỐI VẠT TRẮNG CO221-2 (XÁM)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2268766519318416938059361779844560434802291n_1508827240.png', NULL, NULL),
+(14, 'ÁO THUN CỔ TRÒN HYUKOH CO219-2 (ĐEN)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/2268846119313533938547664896693717137916306n_1508745962.png', NULL, NULL),
+(15, 'ÁO THUN CỔ TRÒN COCACOLA CO215-3 (NÂU)', 1, NULL, '', 99000, 0, 'http://juky.vn/upload/products/tb2t6o5ocxjpufjsszexxaemvxa1593558082_1508578405.jpg', NULL, NULL),
+(16, 'IZRO NAME TEE - YELLOW', 1, NULL, '', 200000, 0, 'http://izro.co.kr/web/product/big/201710/117_shop1_614091.jpg', NULL, NULL),
+(17, 'IZRO LOGO TEE - BLACK', 1, NULL, '', 250000, 0, 'http://izro.co.kr/web/product/big/201701/103_shop1_238662.jpg', NULL, NULL),
+(18, 'IZRO PENCIL TEE - WHITE', 1, NULL, '', 250000, 0, 'http://izro.co.kr/web/product/big/201701/82_shop1_637740.jpg', NULL, NULL),
+(19, 'IZRO PENCIL TEE - BLACK', 1, NULL, '', 250000, 0, 'http://izro.co.kr/web/product/big/201701/81_shop1_727892.jpg', NULL, NULL),
+(20, 'Apologize T-shirt', 1, NULL, '', 280000, 0, 'https://dosi-in.com/wp-content/uploads/2017/07/APOLOGIZE-T-SHIRT1.jpg', NULL, NULL),
+(21, 'To Live T-shirt', 1, NULL, '', 300000, 0, 'https://dosi-in.com/wp-content/uploads/2017/07/DIRTYCOINS-TO-LIVE-T-SHIRT1.jpg', NULL, NULL),
+(22, 'Futurism A Ship – White', 1, NULL, '', 380000, 0, 'https://dosi-in.com/wp-content/uploads/2017/11/Tee-AShip-2-1.png', NULL, NULL),
+(23, 'Futurism A Ship – Black', 1, NULL, '', 380000, 0, 'https://dosi-in.com/wp-content/uploads/2017/11/Tee-AShip-1-1.png', NULL, NULL),
+(24, 'CITY HEAVY TEE – GREY', 1, NULL, '', 500000, 0, 'https://dosi-in.com/wp-content/uploads/2017/11/header-6.jpg', NULL, NULL),
+(25, 'Dreams Tee', 1, NULL, '', 500000, 0, 'https://dosi-in.com/wp-content/uploads/2017/10/FullSizeRender-41.jpg', NULL, NULL),
+(26, 'Black Flannel Shirt', 2, NULL, '', 500000, 0, 'https://dosi-in.com/wp-content/uploads/2017/10/Black-Flannel-Shirt-1.jpg', NULL, NULL),
+(27, 'UM$ Valencia Shirt', 2, NULL, '', 1350000, 0, 'https://dosi-in.com/wp-content/uploads/2017/10/UM-VALENCIA-SHIRT-2.jpg', NULL, NULL),
+(28, 'Plannel Shirt', 2, NULL, '', 400000, 0, 'https://dosi-in.com/wp-content/uploads/2017/07/Saigonexotic-plannel-shirt-02SGEX0200120003-1.jpg', NULL, NULL),
+(29, 'Split Shirt', 2, NULL, '', 850000, 0, 'https://dosi-in.com/wp-content/uploads/2017/07/02AOKE020008001606-01.jpg', NULL, NULL),
+(30, 'CHECK BASEBALL SHIRT', 2, NULL, '', 1350000, 0, 'https://dosi-in.com/wp-content/uploads/2017/11/t17ash10or_03-copy.jpg', NULL, NULL),
+(31, 'LOOSE FIT CHECK SHIRT – BLUE', 2, NULL, '', 790000, 0, 'https://dosi-in.com/wp-content/uploads/2017/11/t17ash02bl_031.jpg', NULL, NULL),
+(32, '80S DENIM SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-80s-denim-shirt-1_master.jpg', NULL, NULL),
+(33, 'BAE STRIPED SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-bea-striped-shirt-blue_master.jpg', NULL, NULL),
+(34, 'BODE DENIM SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-bode-denim-shirt-2_master.jpg', NULL, NULL),
+(35, 'BOX SHIRT', 2, NULL, '', 460000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-box-shirt-beige-0_master.jpg', NULL, NULL),
+(36, 'BOX SHIRT VER. 2', 2, NULL, '', 460000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-box-shirt-ver2-brown_master.jpg', NULL, NULL),
+(37, 'COLLAR DENIM SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-collar-denim-shirt-blue-1_master.jpg', NULL, NULL),
+(38, 'DETA SHIRT', 2, NULL, NULL, 450000, 50000, 'http://product.hstatic.net/1000161656/product/ssstutter-product-deta-shirt-0_master.jpg', NULL, '2018-01-13 17:43:54'),
+(39, 'DUI SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-dui-shirt-2_master.jpg', NULL, NULL),
+(40, 'ONO SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-ono-shirt-black_master.jpg', NULL, NULL),
+(41, 'SOCA SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-soca-shirt_master.jpg', NULL, NULL),
+(42, 'WORK SHIRT', 2, NULL, '', 450000, 0, 'http://product.hstatic.net/1000161656/product/ssstutter-product-work-shirt-blue_master.jpg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -134,21 +176,23 @@ INSERT INTO `products` (`id`, `name`, `id_type`, `description`, `price`, `promot
 -- Table structure for table `type_products`
 --
 
-CREATE TABLE `type_products` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `type_products`;
+CREATE TABLE IF NOT EXISTS `type_products` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `type_products`
 --
 
 INSERT INTO `type_products` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(6, 'Áo sơ mi', NULL, NULL),
-(7, 'Áo thun', NULL, NULL),
-(8, 'Quần kaki', NULL, NULL);
+(0, 'Tất Cả Sản Phẩm', NULL, NULL),
+(1, 'Áo Thun', NULL, NULL),
+(2, 'Áo Sơ Mi', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -156,8 +200,9 @@ INSERT INTO `type_products` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(10) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `email` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -166,117 +211,30 @@ CREATE TABLE `users` (
   `address` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `phone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `updated_at` timestamp NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `remember_token`, `name`, `gender`, `address`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 'LeLe@gmail.com', '123', '', 'Le Thanh Luan', 'Nam', '1', '1', '2017-12-31 15:35:48', '0000-00-00 00:00:00'),
-(2, 'luan@gmail.com', '123', NULL, 'Khanh', 'Nam', '25/34/4', '01666643732', '2018-01-11 03:20:06', '2018-01-11 03:20:06'),
-(3, 'LuanLuan@gmail.com', '123456', NULL, 'Luân', 'Nam', '25/34/4', '01655741825', '2018-01-11 03:21:19', '2018-01-11 03:21:19'),
-(4, 'congkhanh0396@gmail.com', '123', NULL, 'Khanh', 'Nam', '25/34/4', '01655741825', '2018-01-11 03:26:35', '2018-01-11 03:26:35'),
-(5, 'rem123456798@gmail.com', '$2y$10$mUh/YpR17frT4AGJpBWZTuj3rLxNPbZyK5bqrHiuHMagfx8QtD9cG', NULL, 'Khanh', 'Nam', '25/34/4', '01655741825', '2018-01-11 03:28:49', '2018-01-11 03:28:49'),
-(6, 'rem@gmail.com', '$2y$10$GmHMt6AFqRLcyywayEDGiOL1HYjNSUTvOPQspdSmJvYXwOvJVvHl6', NULL, 'Rem', 'Nữ', '25/34/4', '01655741825', '2018-01-11 03:35:27', '2018-01-11 03:35:27'),
-(7, 'congkhanh@gmail.com', '$2y$10$2o8wNoCfQdzga.7IWGg8AOGQhIud2R9tv0PvbgG2GSZe11c5s.mCS', NULL, 'Name', NULL, NULL, NULL, '2018-01-11 03:40:30', '2018-01-11 03:40:30'),
-(8, 'rem1@gmail.com', '$2y$10$i7Hja94Spa2E9tqHhc9Kp.3ZoBqYnNszJZF3r3SBzv7hFr.GR9ABu', NULL, 'Khanh', 'Nam', '25/34/4', '01655741825', '2018-01-11 03:43:29', '2018-01-11 03:43:29'),
-(9, 'rem3@gmail.com', '$2y$10$Xck.jxHZc3Bdnw.L2OiDu..1w26xpSbizDQoK9VdiTEDF7jjVDWEO', NULL, NULL, NULL, NULL, NULL, '2018-01-11 03:46:50', '2018-01-11 03:46:50'),
-(10, 'congkhanh11@gmail.com', '$2y$10$NPgfo9B9FTPVWOgmrb2UxOmL7IyX1XpjSF17RpkImE9pEY3DCUwgO', NULL, NULL, NULL, NULL, NULL, '2018-01-11 03:53:58', '2018-01-11 03:53:58'),
-(11, 'A@gmail.com', '$2y$10$tZdXNNY7aRKA2ChuI063iOhFGEH55z/4C1JEMmQvN6ylDcGYIx4c2', NULL, NULL, NULL, NULL, NULL, '2018-01-11 03:55:49', '2018-01-11 03:55:49'),
-(12, 'B@gmail.com', '$2y$10$PNHhuL95rQO55rO3ZeGgSOMGcZjQUAKfxprC8EuI3in7zfsc2lW8O', NULL, NULL, NULL, NULL, NULL, '2018-01-11 03:56:39', '2018-01-11 03:56:39'),
-(13, 'C@gmail.com', '$2y$10$fenqPgwpKENFBU4wxMjiBu/kHDO1twXsZ5/V3AktnpXt6zlZubeCS', NULL, NULL, NULL, NULL, NULL, '2018-01-11 03:57:44', '2018-01-11 03:57:44'),
-(14, 'D@gmail.com', '$2y$10$F5A4HhyFRK8T3cQBOeNx9OO.7Gghsa55Q6ZyKkSpUBBHN3voFFhVK', NULL, NULL, NULL, NULL, NULL, '2018-01-11 03:59:21', '2018-01-11 03:59:21'),
-(15, 'F@gmail.com', '$2y$10$KzEuLE9fM37n29VbI8ZtYu9DjyaL8Uzs9FfAC5X2CUSR0QnWQllBu', NULL, NULL, NULL, NULL, NULL, '2018-01-11 04:00:12', '2018-01-11 04:00:12'),
-(16, 'E@gmail.com', '$2y$10$KjvAOwjjFCOOCUQGc2NY8OzgyqeIn0BQAaYE2KNc86.SsnNOcHYt2', NULL, NULL, NULL, NULL, NULL, '2018-01-11 04:02:42', '2018-01-11 04:02:42'),
-(17, 'G@gmail.com', '$2y$10$MkxKi/nzNV2cdig8o6IqSe/YKjN/0I0jWiYZzWg6VFp8z7Np6iXXa', NULL, NULL, NULL, NULL, NULL, '2018-01-11 04:13:05', '2018-01-11 04:13:05'),
-(18, 'EE@gmail.com', '$2y$10$LWBF7KOE9R2KwLVu8FGug.Fwp8FaFMNohNjii3x3VaGn79WgiuQ0m', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:16:45', '2018-01-11 08:16:45'),
-(19, 'RR@gmail.com', '$2y$10$1Xlei5MW3Dhn2SFtXZbn4eSlNOG.VUMTi7.czaS658eFaOsv2F1HG', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:20:45', '2018-01-11 08:20:45'),
-(20, 'QQ@gmail.com', '$2y$10$t8Dk2Myth9neYI81eNSSROR53Q9/EkZbPnRibtx.jdtGEpXRUDxlq', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:22:10', '2018-01-11 08:22:10'),
-(21, 'WW@gmail.com', '$2y$10$4vvuiIG2ssoxHztzelttR.hvX9TjgfR7lX.toneuCay8CfeCzHs6C', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:22:39', '2018-01-11 08:22:39'),
-(22, 'TT@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:46:21', '2018-01-11 08:46:21'),
-(23, 'YY@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:47:02', '2018-01-11 08:47:02'),
-(24, 'SS@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:48:40', '2018-01-11 08:48:40'),
-(25, 'FF@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:51:28', '2018-01-11 08:51:28'),
-(26, 'JJ@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:52:40', '2018-01-11 08:52:40'),
-(27, 'GG@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:53:30', '2018-01-11 08:53:30'),
-(28, 'VV@gmail.com', '123', NULL, NULL, NULL, NULL, NULL, '2018-01-11 08:54:18', '2018-01-11 08:54:18');
+(2, 'a@gm', '$2y$10$Ma/lISyNPPWvNq0Hw7wL9O6ysUA3Q63NltEAn4tkuh6j9cnSS4rou', NULL, NULL, NULL, NULL, NULL, '2018-01-14 04:39:06', '2018-01-14 04:39:06'),
+(3, 'fasdf@gmail.com', '$2y$10$sOKVcwmzqFk5p5V4bj4etOARE/DYPpxQUUfjUSVlB64Fh11NgnT6y', 'ewZgToxRkWxrGF4gV5SERdZnBHcQEBH69OfDUY2K', '121', NULL, NULL, NULL, '2018-01-14 04:46:58', '2018-01-14 04:46:58'),
+(4, 'g@gmail.com', '$2y$10$O3kgWTRBQmu9XVtNaLktnulPspG87hoYNXDCqloLkmeModiWeBQLG', 'ewZgToxRkWxrGF4gV5SERdZnBHcQEBH69OfDUY2K', 'cXC', NULL, NULL, NULL, '2018-01-14 04:48:32', '2018-01-14 04:48:32'),
+(5, 'fs@gmail.com', '$2y$10$/cWHraRI3A.9T3Ifpxcp/.hPfeb55f.6GmBIPNUDTAUTANjl3lrli', 'ewZgToxRkWxrGF4gV5SERdZnBHcQEBH69OfDUY2K', 'fadf', NULL, NULL, NULL, '2018-01-14 04:50:23', '2018-01-14 04:50:23');
 
 --
--- Indexes for dumped tables
+-- Constraints for dumped tables
 --
 
 --
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bills`
---
-ALTER TABLE `bills`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `bill_detail`
---
-ALTER TABLE `bill_detail`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `type_products`
---
-ALTER TABLE `type_products`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT for table `bills`
---
-ALTER TABLE `bills`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `bill_detail`
---
-ALTER TABLE `bill_detail`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
---
--- AUTO_INCREMENT for table `type_products`
---
-ALTER TABLE `type_products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;COMMIT;
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id_type`) REFERENCES `type_products` (`id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

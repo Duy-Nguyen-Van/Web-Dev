@@ -8,6 +8,7 @@ use App\Products;
 use App\Type_products;
 use App\User;
 use Hash;
+use Cart;
 
 class PageController extends Controller
 {
@@ -18,9 +19,16 @@ class PageController extends Controller
     }
 
     public function getProducts($type) {
-        $cate_product = Products::where('id_type',$type)->paginate(6);
-        $sale = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(4)->get();
-        return view('pages.products',compact('cate_product','sale'));
+        if($type == 0) {
+            $cate_product = Products::select('*')->paginate(6);
+            $sale = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(4)->get();
+            return view('pages.products',compact('cate_product','sale'));
+        }
+        else {
+            $cate_product = Products::where('id_type',$type)->paginate(6);
+            $sale = Products::where('promotion','<>','0')->orderBy('promotion','desc')->take(4)->get();
+            return view('pages.products',compact('cate_product','sale'));
+        }
     }
 
     public function getSingle(Request $req) {
@@ -29,8 +37,9 @@ class PageController extends Controller
     }
 
     public function getCheckout() {
-        return view('pages.checkout');
-        
+        $content = Cart::content();
+        $total = Cart::subtotal();
+        return view('pages.checkout',compact('content','total'));
     }
 
     public function getInformation() {
@@ -54,8 +63,43 @@ class PageController extends Controller
         $user->email = $req->txtEmail;
         $user->password = Hash::make($req->txtPassword);
         $user->remember_token = $req->_token;
-        // $user->name = $req->txtName;
+        $user->name = $req->txtName;
         $user->save();
-        return view('page.register');
+        return view('pages.register')->with(['flash_level'=>'success','flash_message'=>'Tạo tài khoản thành công!']);
+    }
+
+    public function getAddProductToCart($id) {
+        $product_buy = Products::where('id', $id)->first();
+        if ($product_buy->promotion == 0) {
+            $productPrice = $product_buy->price;
+        }
+        else {
+            $productPrice = $product_buy->promotion;
+        }
+        Cart::add(array('id'=>$id, 'name'=>$product_buy->name, 'qty'=>1, 'price'=>$productPrice, 
+            'options'=>array('img'=>$product_buy->image)));
+        $content = Cart::content();
+        $total = Cart::total();
+        return redirect()->back();
+    }
+
+    public function getCart() {
+        $content = Cart::content();
+        $total = Cart::subtotal();
+        return view('pages.information', compact('content', 'total'));
+    }
+
+    public function getDeleteCart($id) {
+        Cart::remove($id);
+        return redirect()->route('checkout');
+    }
+
+    public function getDeleteAll() {
+        Cart::destroy();
+        return redirect()->route('index');
+    }
+
+    public function getCartDetail() {
+        return view('pages.information');
     }
 }

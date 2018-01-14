@@ -48,7 +48,7 @@
 			<div class="clearfix"> </div>
 		</div>
 		<div class="shop">
-			<a href="#">MUA NGAY</a>
+			<a href="{{route('products',0)}}">MUA NGAY</a>
 		</div>
 	</div>
 </div>
@@ -77,7 +77,7 @@
 		</div>
 		<div class="products-grid">
 			<header>
-				<h3 class="head text-center">Latest Products</h3>
+				<h3 class="head text-center">Sản phẩm mới nhất</h3>
 			</header>
 			@foreach($lastest as $lastestItem)
 				<div class="col-md-4 product simpleCart_shelfItem text-center">
@@ -86,7 +86,7 @@
 						<a href="{{route('single', $lastestItem->id)}}">Quick View</a>
 					</div>
 					<a class="product_name" href="{{route('single', $lastestItem->id)}}">{{$lastestItem->name}}</a>
-					<p><a class="item_add" href="#"><i></i> <span class="item_price">{{$lastestItem->price}}</span></a></p>
+					<p><a class="item_add" href="{{route('add-to-cart', $lastestItem->id)}}"><i></i> <span class="item_price">{{$lastestItem->price}} VNĐ</span></a></p>
 				</div>
 			@endforeach
 			<div class="clearfix"></div>
@@ -96,13 +96,13 @@
 
 <div class="other-products">
 	<div class="container">
-		<h3 class="like text-center">Sale Products</h3>        			
+		<h3 class="like text-center">Sản phẩm khuyến mãi</h3>        			
 		<ul id="flexiselDemo3">
 		@foreach($sale as $saleItem)
 			<li><a href="{{route('single', $saleItem->id)}}"><img src="{{$saleItem->image}}" class="img-responsive" alt="" /></a>
 				<div class="product liked-product simpleCart_shelfItem">
 					<a class="like_name" href="{{route('single', $saleItem->id)}}">{{$saleItem->name}}</a>
-					<p><a class="item_add" href="#"><i></i> <span class=" item_price">{{$saleItem->promotion}}</span></a></p>
+					<p><a class="item_add" href="{{route('add-to-cart', $saleItem->id)}}"><i></i> <span class=" item_price">{{$saleItem->promotion}} VNĐ</span></a></p>
 				</div>
 			</li>
 		@endforeach
