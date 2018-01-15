@@ -20,7 +20,13 @@
 				</div>
 				<div class="span span1">
 					<p class="left">GIÁ:</p>
-					<p class="right">{{number_format($detail_pro->price,3)}} VNĐ</p>
+					<p class="right">
+					@if($detail_pro->promotion < $detail_pro->price)
+						{{number_format($detail_pro->promotion,3)}}
+						@else
+						{{number_format($detail_pro->price,3)}}
+						@endif
+					VNĐ</p>
 					<div class="clearfix"></div>
 				</div>
 				<div class="span span1">
