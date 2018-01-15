@@ -118,13 +118,10 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-list-alt"></i>Bill<span class="fa arrow"></span></a>
+                            <a href="#"><i class="glyphicon glyphicon-list-alt"></i> Bill<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="">Show Bill</a>
-                                </li>
-                                <li>
-                                    <a href="#">Show Detail</a>
+                                    <a href="{{route('admin.bill.showBill')}}">Show Bill</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

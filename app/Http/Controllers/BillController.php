@@ -19,14 +19,15 @@ class BillController extends Controller
         return view('admin.bill.showDetail',compact('bill_detail'));
     }
 
-    public function postCheck($id){
+    public function getCheck($id){
         $bill = Bills::find($id);
         if(!is_null($bill)){
             $bill->checkout=1;
             $bill->save();
-            return redirect(route('admin.bill.showBill'))->with('thanhcong','Xác nhận đã thanh toán');
+            return redirect(route('admin.bill.showBill', compact('bill')))->with('thanhcong','Xác nhận đã thanh toán');
         }
-        return redirect(route('admin.bill.showBill'));
-        
+        else {
+            return redirect(route('admin.bill.showBill', compact('bill')))->with('thatbai','Chưa thể thanh toán');
+        }
     }
 }

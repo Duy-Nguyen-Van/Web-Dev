@@ -24,7 +24,7 @@
                             <th>Tên khách hàng</th>
                             <th>Ngày đặt hàng</th>
                             <th>Tổng giá</th>
-                            <th>ghi chú</th>
+                            <th>Ghi chú</th>
                             <th>Đã thanh toán</th>
                              <th>Trạng thái</th>
                              <th>Chi tiết </th>
@@ -46,7 +46,7 @@
                                     @else
                                     Đã thanh toán
                              @endif</td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.bill.postCheck', $item->id)}}">Thanh toán</a></td> 
+                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.bill.getCheck', $item->id)}}">Thanh toán</a></td> 
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{route('admin.bill.showDetail', $item->id)}}">Xem chi tiết</a></td> 
                         </tr>
                         @endforeach

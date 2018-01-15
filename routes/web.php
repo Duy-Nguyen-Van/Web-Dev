@@ -94,7 +94,7 @@ Route::group(['prefix'=>'admin','middleware'=>'checkLoginAdmin'], function(){
     // Manage bills
     Route::group(['prefix'=>'bill'], function(){
         Route::get('showBill', ['as'=>'admin.bill.showBill', 'uses'=>'BillController@getBill']);
-        Route::post('postCheck/{id}', ['as'=>'admin.bill.postCheck', 'uses'=>'BillController@postCheck']);	
+        Route::get('getCheck/{id}', ['as'=>'admin.bill.getCheck', 'uses'=>'BillController@getCheck']);	
         Route::get('showDetail/{id}', ['as'=>'admin.bill.showDetail', 'uses'=>'BillController@getBillDetail']);    
     });
 
